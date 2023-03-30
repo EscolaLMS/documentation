@@ -11,7 +11,7 @@
 
 ## What does it do
 
-This package is used to export and import users in the `.csv` format.
+This package is used to export and import users in the `.csv` format. 
 
 ## Installation
 
@@ -27,7 +27,7 @@ This package is used to export and import users in the `.csv` format.
 - Export uses fields from `EscolaLms\Auth\Http\Resources\UserFullResource`
 
 - Import uses the `update` or `create` method from `EscolaLms\Auth\Repositories\Contracts\UserRepositoryContract`.
-  If the email exists in the database, the user's data is updated. Otherwise, a new user is created.
+If the email exists in the database, the user's data is updated. Otherwise, a new user is created.
 
 ## Endpoints
 
@@ -39,7 +39,7 @@ Run `./vendor/bin/phpunit` to run tests. Test details
 [![codecov](https://codecov.io/gh/EscolaLMS/CSV-Users/branch/main/graph/badge.svg?token=NRAN4R8AGZ)](https://codecov.io/gh/EscolaLMS/CSV-Users)
 [![phpunit](https://github.com/EscolaLMS/CSV-Users/actions/workflows/test.yml/badge.svg)](https://github.com/EscolaLMS/CSV-Users/actions/workflows/test.yml)
 
-## Events
+## Events 
 
 - `EscolaLms\CsvUsers\Events\EscolaLmsImportedNewUserTemplateEvent` => Event is dispatched after importing a new user.
 
@@ -48,8 +48,8 @@ Run `./vendor/bin/phpunit` to run tests. Test details
 ### Admin panel
 
 **Import and export button**
-![Import / export button](./docs/csv-users/buttons.png "Import / export button")
+![Import / export button](https://raw.githubusercontent.com/EscolaLMS/CSV-Users/main/docs/buttons.png "Import / export button")
 
 ## Permissions
 
-Permissions are defined in [seeder](https://github.com/EscolaLMS/CSV-Users/blob/main/database/seeders/CsvUsersPermissionSeeder.php).
+Permissions are defined in [seeder](https://raw.githubusercontent.com/EscolaLMS/CSV-Users/main/database/seeders/CsvUsersPermissionSeeder.php)

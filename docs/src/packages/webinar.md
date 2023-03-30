@@ -1,5 +1,4 @@
 # Webinar
-
 Package enabling live video stream
 
 [![swagger](https://img.shields.io/badge/documentation-swagger-green)](https://escolalms.github.io/Webinar/)
@@ -23,7 +22,7 @@ This package is used for creating Webinar for EscolaLms.
 
 ## Schedule
 
-- In App\Console\Kernel to method schedule add
+- In App\Console\Kernel to method schedule add 
   - `$schedule->job(new ReminderAboutWebinarJob(WebinarTermReminderStatusEnum::REMINDED_HOUR_BEFORE))->everyFiveMinutes()` - reminder about to webinar before one hour, executed every 5 minutes
   - `$schedule->job(new ReminderAboutWebinarJob(WebinarTermReminderStatusEnum::REMINDED_DAY_BEFORE))->everySixHours();` - reminder about to webinar before one day, executed every 6 hours
 
@@ -33,7 +32,7 @@ All the endpoints are defined in [![swagger](https://img.shields.io/badge/docume
 
 ## Tests
 
-Run `./vendor/bin/phpunit --filter=Webinar` to run tests. See [tests](https://github.com/EscolaLMS/Webinar/tree/main/tests) folder as it's quite good staring point as documentation appendix.
+Run `./vendor/bin/phpunit --filter=Webinar` to run tests. See [tests](https://raw.githubusercontent.com/EscolaLMS/Webinar/main/tests) folder as it's quite good staring point as documentation appendix.
 
 Test details [![codecov](https://codecov.io/gh/EscolaLMS/Webinar/branch/main/graph/badge.svg?token=NRAN4R8AGZ)](https://codecov.io/gh/EscolaLMS/Webinar) [![phpunit](https://github.com/EscolaLMS/Webinar/actions/workflows/test.yml/badge.svg)](https://github.com/EscolaLMS/Webinar/actions/workflows/test.yml)
 
@@ -53,87 +52,29 @@ Test details [![codecov](https://codecov.io/gh/EscolaLMS/Webinar/branch/main/gra
 
 **Left menu**
 
-![Menu](./docs/webinar/menu.png "Menu")
+![Menu](https://raw.githubusercontent.com/EscolaLMS/Webinar/main/docs/menu.png "Menu")
 
 **List of webinars**
 
-![List of webinars](./docs/webinar/list.png "List of webinars")
+![List of webinars](https://raw.githubusercontent.com/EscolaLMS/Webinar/main/docs/list.png "List of webinars")
 
 **Creating/editing webinar**
 
-![Creating/editing webinars](./docs/webinar/new_webinar.png "Creating or editing webinars")
+![Creating/editing webinars](https://raw.githubusercontent.com/EscolaLMS/Webinar/main/docs/new_webinar.png "Creating or editing webinars")
 
 ### Front Application
 
-For the frontend to be able to run the webinar, it is necessary to use this package in the case of integration with react [React SDK](https://jitsi.github.io/handbook/docs/dev-guide/dev-guide-react-sdk) or iframe api in case of other integrations [IFrame API](https://jitsi.github.io/handbook/docs/dev-guide/dev-guide-iframe)
-
-After setting the appropriate role, we start the startRecording method to make the webinar stream on the [youtube](https://www.youtube.com/intl/ALL_pl/howyoutubeworks/) platform.
-
-```tsx
-import { useState } from "react";
-import * as API from "@escolalms/sdk/lib/types/api";
-import { JitsiMeeting } from "@jitsi/react-sdk";
-import styles from "./jitsy.module.scss";
-
-const JitsyBox: React.FC<{
-  JitsyData: API.JitsyData | null;
-  close: () => void;
-}> = ({ JitsyData, close }) => {
-  const [jitsyIsReady, setJitsyIsReady] = useState(false);
-
-  const handleReadyToClose = () => {
-    close();
-  };
-
-  return (
-    <div className={styles.jitsy_box}>
-      {JitsyData && (
-        <JitsiMeeting
-          {...JitsyData.data}
-          configOverwrite={{
-            ...JitsyData.data.configOverwrite,
-          }}
-          interfaceConfigOverwrite={{
-            ...JitsyData.data.interfaceConfigOverwrite,
-          }}
-          getIFrameRef={(iframeRef) => {
-            //iframe style definition
-          }}
-          onApiReady={(externalApi) => {
-            // we have to listen to the change of role to moderator in order to execute the command to record and stream on youtube
-            externalApi.on("participantRoleChanged", (event) => {
-              setJitsyIsReady(true);
-              if (event.role === "moderator") {
-                externalApi.executeCommand("startRecording", {
-                  mode: "stream",
-
-                  rtmpStreamKey: JitsyData.yt_stream_url,
-
-                  youtubeStreamKey: JitsyData.yt_stream_key,
-                });
-              }
-            });
-          }}
-          onReadyToClose={handleReadyToClose}
-        />
-      )}
-    </div>
-  );
-};
-
-export default JitsyBox;
-```
+...
 
 ## Permissions
 
-Permissions are defined in [seeder](https://github.com/EscolaLMS/Webinar/blob/main/database/seeders/WebinarsPermissionSeeder.php)
+Permissions are defined in [seeder](https://raw.githubusercontent.com/EscolaLMS/Webinar/main/vendor/escolalms/webinar/database/seeders/WebinarsPermissionSeeder.php)
 
 ## Database relation
 
 1. `Trainers` Webinar is related belongs to many with User
 2. `Tags` Webinar model morph many to model tags
 3. `Users` Webinar is related belongs to many with User which bought webinar
-
 ```
 Webinar 1 -> n User
 Webinar 1 -> n Tags

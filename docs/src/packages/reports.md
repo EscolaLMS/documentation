@@ -75,7 +75,7 @@ After creating a Metric you need to register it by adding it to `metrics` array 
 
 ## Endpoints
 
-All the endpoints are defined in [![swagger](https://img.shields.io/badge/documentation-swagger-green)](https://escolalms.github.io/Reports/).
+All the endpoints are defined in [![swagger](https://img.shields.io/badge/documentation-swagger-green)](https://escolalms.github.io/reports/).
 
 ### Metrics endpoints
 
@@ -111,12 +111,16 @@ No Listeners are defined in this package.
 
 #### **Reports dashboard**
 
-![Reports dashboard](./docs/reports/reports.png "Reports dashboard")
+![Reports dashboard](https://raw.githubusercontent.com/EscolaLMS/Reports/main/docs/reports.png "Reports dashboard")
 
 #### **Course Stats**
 
-![Course statistics](./docs/reports/course.png "Course statistics")
+![Course statistics](https://raw.githubusercontent.com/EscolaLMS/Reports/main/docs/course.png "Course statistics")
 
 ## Permissions
 
-Permissions are defined in [Enum](https://github.com/EscolaLMS/Reports/blob/main/src/Enums/ReportsPermissionsEnum.php) and seeded in [Seeder](https://github.com/EscolaLMS/Reports/blob/main/database/seeders/ReportsPermissionSeeder.php).
+Permissions are defined in [Enum](https://raw.githubusercontent.com/EscolaLMS/Reports/main/src/Enums/ReportsPermissionsEnum.php) and seeded in [Seeder](database/seeders/ReportsPermissionSeeder.php).
+
+## Roadmap. Todo. Troubleshooting
+
+- ???

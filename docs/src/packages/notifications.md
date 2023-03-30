@@ -30,7 +30,7 @@ All the endpoints are defined in [![swagger](https://img.shields.io/badge/docume
 
 ## Tests
 
-Run `./vendor/bin/phpunit --filter 'EscolaLms\\Notifications\\Tests'` to run tests. See [tests](https://github.com/EscolaLMS/Notifications/tree/main/tests) folder as it's quite good staring point as documentation appendix.
+Run `./vendor/bin/phpunit --filter 'EscolaLms\\Notifications\\Tests'` to run tests. See [tests](https://raw.githubusercontent.com/EscolaLMS/Notifications/main/tests) folder as it's quite good staring point as documentation appendix.
 
 Test details:
 [![codecov](https://codecov.io/gh/EscolaLMS/notifications/branch/main/graph/badge.svg?token=gBzpyNK8DQ)](https://codecov.io/gh/EscolaLMS/notifications)
@@ -40,15 +40,15 @@ Test details:
 
 #### **Left menu**
 
-![Menu](./docs/notifications/menu.png "Menu")
+![Menu](https://raw.githubusercontent.com/EscolaLMS/Notifications/main/docs/menu.png "Menu")
 
 #### **List of notifications**
 
-![List of notifications](./docs/notifications/list.png "List of notifications")
+![List of notifications](https://raw.githubusercontent.com/EscolaLMS/Notifications/main/docs/list.png "List of notifications")
 
 ## Permissions
 
-Permissions are defined in [seeder](https://github.com/EscolaLMS/Notifications/blob/main/database/seeders/NotificationsPermissionsSeeder.php)
+Permissions are defined in [seeder](https://raw.githubusercontent.com/EscolaLMS/Notifications/main/vendor/escolalms/notifications/database/seeders/NotificationsPermissionsSeeder.php)
 
 ## Events
 
@@ -58,3 +58,6 @@ No Events are defined in this package.
 
 - `EscolaLms\Notifications\Listeners\NotifiableEventListener` - this listener listens to all events in `EscolaLms` namespace
 
+## Roadmap. Todo. Troubleshooting
+
+- ???

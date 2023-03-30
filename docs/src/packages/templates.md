@@ -20,7 +20,7 @@ Each template is defined by
 
 For every channel & event pair a single Variables definition is registered, which contains tokens that can be used in the template and replaced with values based on the data from the Event.
 
-Analysing these three example files in [tests](https://github.com/EscolaLMS/Templates/tree/main/tests/Mock):
+Analysing these three example files in [tests](https://raw.githubusercontent.com/EscolaLMS/Templates/main/tests/Mock):
 
 - TestChannel.php
 - TestVariables.php
@@ -43,6 +43,7 @@ To register Event-Channel-Variable set, `Template::register($eventClass, $channe
 This package has no Channels or Variables defined, everything should be created in separate packages.
 
 - [Templates-Email](https://github.com/EscolaLMS/Templates-Email)
+- [Templates-Certificates](https://github.com/EscolaLMS/Templates-Certificates)
 - [Templates-Pdf](https://github.com/EscolaLMS/Templates-Pdf)
 
 ### Event Wrapper
@@ -51,11 +52,11 @@ This package has no Channels or Variables defined, everything should be created 
 
 ## Endpoints
 
-All the endpoints are defined in [![swagger](https://img.shields.io/badge/documentation-swagger-green)](https://escolalms.github.io/Templates/)
+All the endpoints are defined in [![swagger](https://img.shields.io/badge/documentation-swagger-green)](https://escolalms.github.io/templates/)
 
 ## Tests
 
-Run `./vendor/bin/phpunit --filter 'EscolaLms\\Templates\\Tests'` to run tests. See [tests](https://github.com/EscolaLMS/Templates/tree/main/tests) folder as it's quite good staring point as documentation appendix.
+Run `./vendor/bin/phpunit --filter 'EscolaLms\\Templates\\Tests'` to run tests. See [tests](https://raw.githubusercontent.com/EscolaLMS/Templates/main/tests) folder as it's quite good staring point as documentation appendix.
 
 Test details:
 [![codecov](https://codecov.io/gh/EscolaLMS/Templates/branch/main/graph/badge.svg?token=NRAN4R8AGZ)](https://codecov.io/gh/EscolaLMS/Templates)
@@ -73,16 +74,20 @@ These screens will only be available if at least one Template is registered (for
 
 #### **Left menu**
 
-![Menu](./docs/templates/menu.png "Menu")
+![Menu](https://raw.githubusercontent.com/EscolaLMS/Templates/main/docs/menu.png "Menu")
 
 #### **List of templates**
 
-![List of templates](./docs/templates/list.png "List of templates")
+![List of templates](https://raw.githubusercontent.com/EscolaLMS/Templates/main/docs/list.png "List of templates")
 
 #### **Creating/editing template**
 
-![Creating/editing template](./docs/templates/edit.png "Creating or editing template")
+![Creating/editing template](https://raw.githubusercontent.com/EscolaLMS/Templates/main/docs/edit.png "Creating or editing template")
 
 ## Permissions
 
-Permissions are defined in [Enum](https://github.com/EscolaLMS/Templates/blob/main/src/Enums/TemplatesPermissionsEnum.php) and seeded in [Seeder](https://github.com/EscolaLMS/Templates/blob/main/database/seeders/PermissionTableSeeder.php).
+Permissions are defined in [Enum](https://raw.githubusercontent.com/EscolaLMS/Templates/main/src/Enums/TemplatesPermissionsEnum.php) and seeded in [Seeder](database/seeders/PermissionTableSeeder.php).
+
+## Roadmap. Todo. Troubleshooting
+
+- ???

@@ -42,7 +42,7 @@ Class describing Template Variables must be registered using Template facade fro
 
 ## Tests
 
-Run `./vendor/bin/phpunit --filter 'EscolaLms\\TemplatesPdf\\Tests'` to run tests. See [tests](https://github.com/EscolaLMS/Templates-PDF/tree/main/tests) folder as it contains a basic implementation of Variables class (description of what Template can/must contain) with minimal customisation - a quite good starting point for creating your own.
+Run `./vendor/bin/phpunit --filter 'EscolaLms\\TemplatesPdf\\Tests'` to run tests. See [tests](https://raw.githubusercontent.com/EscolaLMS/Templates-PDF/main/tests) folder as it contains a basic implementation of Variables class (description of what Template can/must contain) with minimal customisation - a quite good starting point for creating your own.
 
 Test details:
 [![Maintainability](https://api.codeclimate.com/v1/badges/60eb83351d2d550c15cb/maintainability)](https://codeclimate.com/github/EscolaLMS/Templates-PDF/maintainability)
@@ -54,16 +54,20 @@ Test details:
 
 #### **Left menu**
 
-![Menu](./docs/templates-pdf/menu.png "Menu")
+![Menu](https://raw.githubusercontent.com/EscolaLMS/Templates-PDF/main/docs/menu.png "Menu")
 
 #### **List of templates**
 
-![List of templates](./docs/templates-pdf/list.png "List of templates")
+![List of templates](https://raw.githubusercontent.com/EscolaLMS/Templates-PDF/main/docs/list.png "List of templates")
 
 #### **Creating/editing template**
 
-![Creating/editing template](./docs/templates-pdf/edit.png "Creating or editing template")
+![Creating/editing template](https://raw.githubusercontent.com/EscolaLMS/Templates-PDF/main/docs/edit.png "Creating or editing template")
 
 ## Permissions
 
-Permissions are defined in [Enum](https://github.com/EscolaLMS/Templates-Pdf/blob/main/src/Enums/PdfPermissionsEnum.php) and seeded in [Seeder](https://github.com/EscolaLMS/Templates-Pdf/blob/main/database/seeders/PermissionTableSeeder.php).
+Permissions are defined in [Enum](https://raw.githubusercontent.com/EscolaLMS/Templates-PDF/main/src/Enums/PdfPermissionsEnum.php) and seeded in [Seeder](database/seeders/PermissionTableSeeder.php).
+
+## Roadmap. Todo. Troubleshooting
+
+- ???

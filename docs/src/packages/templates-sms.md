@@ -15,7 +15,7 @@ This package supports sending sms via twilio.
 
 ## Configuration
 You can configure the connection to Twilio through keys in the `.env` file:
-- `TWILIO_SID` - twilio SID unique key
+- `TWILIO_SID` - twilio SID unique key 
 - `TWILIO_TOKEN` - twilio auth token
 - `TWILIO_FROM` - twilio phone number
 - `TWILIO_SSL_VERIFY` - twilio ssl verify
@@ -63,7 +63,7 @@ Sms::extend('custom', function($app) {
 
 
 ## Tests
-Run `./vendor/bin/phpunit` to run tests. See [tests](https://github.com/EscolaLMS/Templates-SMS/tree/main/tests) folder as it's quite good staring point as documentation appendix.
+Run `./vendor/bin/phpunit` to run tests. See [tests](https://raw.githubusercontent.com/EscolaLMS/Templates-SMS/main/tests) folder as it's quite good staring point as documentation appendix.
 
 [![codecov](https://codecov.io/gh/EscolaLMS/Templates-SMS/branch/main/graph/badge.svg?token=O91FHNKI6R)](https://codecov.io/gh/EscolaLMS/Templates-SMS)
 [![Tests PHPUnit in environments](https://github.com/EscolaLMS/Templates-SMS/actions/workflows/test.yml/badge.svg)](https://github.com/EscolaLMS/Templates-SMS/actions/workflows/test.yml)
@@ -89,3 +89,4 @@ public function testSms() {
     Sms::assertSent($phone1, fn($sms) => $sms->content === 'Sms message');
 }
 ```
+

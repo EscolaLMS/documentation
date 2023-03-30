@@ -44,7 +44,7 @@ Each notification is created as a class describing available variables that can 
 
 ## Tests
 
-Run `./vendor/bin/phpunit --filter 'EscolaLms\\TemplatesEmail\\Tests'` to run tests. See [tests](https://github.com/EscolaLMS/Templates-Email/tree/main/tests) folder as it contains a basic implementation of Variable (or Template description) class with minimal customisation - a quite good starting point for creating your own.
+Run `./vendor/bin/phpunit --filter 'EscolaLms\\TemplatesEmail\\Tests'` to run tests. See [tests](https://raw.githubusercontent.com/EscolaLMS/Templates-Email/main/tests) folder as it contains a basic implementation of Variable (or Template description) class with minimal customisation - a quite good starting point for creating your own.
 
 Test details [![codecov](https://codecov.io/gh/EscolaLMS/Templates-Email/branch/main/graph/badge.svg?token=O91FHNKI6R)](https://codecov.io/gh/EscolaLMS/Templates-Email) [![Tests PHPUnit in environments](https://github.com/EscolaLMS/Templates-Email/actions/workflows/test.yml/badge.svg)](https://github.com/EscolaLMS/Templates-Email/actions/workflows/test.yml)
 
@@ -54,16 +54,20 @@ Test details [![codecov](https://codecov.io/gh/EscolaLMS/Templates-Email/branch/
 
 #### **Left menu**
 
-![Menu](./docs/templates-email/menu.png "Menu")
+![Menu](https://raw.githubusercontent.com/EscolaLMS/Templates-Email/main/docs/menu.png "Menu")
 
 #### **List of templates**
 
-![List of templates](./docs/templates-email/list.png "List of templates")
+![List of templates](https://raw.githubusercontent.com/EscolaLMS/Templates-Email/main/docs/list.png "List of templates")
 
 #### **Creating/editing template**
 
-![Creating/editing template](./docs/templates-email/edit.png "Creating or editing template")
+![Creating/editing template](https://raw.githubusercontent.com/EscolaLMS/Templates-Email/main/docs/edit.png "Creating or editing template")
 
 ## Permissions
 
 No Permissions defined for this package.
+
+## Roadmap. Todo. Troubleshooting
+
+- ???

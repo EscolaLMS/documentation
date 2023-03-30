@@ -24,25 +24,25 @@ All the endpoints are defined in [![swagger](https://img.shields.io/badge/docume
 
 ## Tests
 
-Run `./vendor/bin/phpunit --filter 'EscolaLms\\Categories\\Tests'` to run tests. See [tests](https://github.com/EscolaLMS/Categories/tree/main/tests) folder as it's quite good staring point as documentation appendix.
+Run `./vendor/bin/phpunit --filter 'EscolaLms\\Categories\\Tests'` to run tests. See [tests](https://raw.githubusercontent.com/EscolaLMS/Categories/main/tests) folder as it's quite good staring point as documentation appendix.
 
 ### Admin panel
 
 **Left menu**
 
-![Menu](./docs/categories/menu.png "Menu")
+![Menu](https://raw.githubusercontent.com/EscolaLMS/Categories/main/docs/menu.png "Menu")
 
 **List of consultations**
 
-![List of categories](./docs/categories/list.png "List of categories")
+![List of categories](https://raw.githubusercontent.com/EscolaLMS/Categories/main/docs/list.png "List of categories")
 
 **Creating/editing consultation**
 
-![Creating/editing category](./docs/categories/create.png "Creating or editing category")
+![Creating/editing category](https://raw.githubusercontent.com/EscolaLMS/Categories/main/docs/create.png "Creating or editing category")
 
 ## Permissions
 
-Permissions are defined in [seeder](https://github.com/EscolaLMS/Categories/blob/main/database/seeders/CategoriesPermissionSeeder.php)
+Permissions are defined in [seeder](https://raw.githubusercontent.com/EscolaLMS/Categories/main/vendor/escolalms/categories/database/seeders/CategoriesPermissionSeeder.php)
 
 ## Features
 

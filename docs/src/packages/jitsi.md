@@ -61,7 +61,7 @@ would generate some thing like
    ]
 ```
 
-pass this object into endpoint that generates jitsi call. You should definitely [read the manual before](https://jitsi.github.io/handbook/docs/dev-guide/dev-guide-web/).
+pass this object into endpoint that generates jitsi call. You should definitely [read the manual before](https://jitsi.github.io/handbook/docs/dev-guide/dev-guide-web-sdk).
 
 Example
 
@@ -103,5 +103,5 @@ export default App;
 
 ## Tests
 
-Run `./vendor/bin/phpunit --filter 'EscolaLms\\Jitsi\\Tests'` to run tests. See [tests](https://github.com/EscolaLMS/Jitsi/tree/main/tests) folder as it's quite good staring point as documentation appendix.
+Run `./vendor/bin/phpunit --filter 'EscolaLms\\Jitsi\\Tests'` to run tests. See [tests](https://raw.githubusercontent.com/EscolaLMS/Jitsi/main/tests) folder as it's quite good staring point as documentation appendix.
 
