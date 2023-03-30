@@ -47,6 +47,6 @@ In order to have API working headlessly you need to provide valid [`CORS` settin
 
 ## Deploying on heroku
 
-There is [Procfile](https://raw.githubusercontent.com/EscolaLMS/h5p-laravel-demo/main/./Procfile) already in the repo. Once you deploy and build on heroku login to console and run commands in [heroku.sh](./heroku.sh) scripts.
+There is [Procfile](https://github.com/EscolaLMS/h5p-laravel-demo/tree/main/./Procfile) already in the repo. Once you deploy and build on heroku login to console and run commands in [heroku.sh](./heroku.sh) scripts.
 
 `heroku ps:exec --dyno=web.1 -a h5p-laravel-demo bash` then run `./heroku.sh`

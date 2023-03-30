@@ -65,7 +65,7 @@ Endpoint `/api/scorm/play/{uuid}` returns the html file with the `<iframe>`.
 ![Scorm player](https://raw.githubusercontent.com/EscolaLMS/Scorm/main/docs/player.png "Scorm player")
 
 ## Permissions
-Permissions are defined in [seeder](https://raw.githubusercontent.com/EscolaLMS/Scorm/main/database/seeders/PermissionTableSeeder.php).
+Permissions are defined in [seeder](https://github.com/EscolaLMS/Scorm/tree/main/database/seeders/PermissionTableSeeder.php).
 
 ## Todo.
 The package does not support all available scorm formats 

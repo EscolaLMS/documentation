@@ -68,4 +68,4 @@ Test details [![codecov](https://codecov.io/gh/EscolaLMS/Stationary-Events/branc
 
 ## Permissions
 
-Permissions are defined in [seeder](https://raw.githubusercontent.com/EscolaLMS/Stationary-Events/main/database/seeders/StationaryEventPermissionSeeder.php)
+Permissions are defined in [seeder](https://github.com/EscolaLMS/Stationary-Events/tree/main/database/seeders/StationaryEventPermissionSeeder.php)

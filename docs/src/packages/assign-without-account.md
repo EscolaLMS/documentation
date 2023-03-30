@@ -46,7 +46,7 @@ All the endpoints are defined in swagger
 [![swagger](https://img.shields.io/badge/documentation-swagger-green)](https://escolalms.github.io/AssignWithoutAccount/)
 
 ## Tests
-Run `./vendor/bin/phpunit` to run tests. See [tests](https://raw.githubusercontent.com/EscolaLMS/Assign-Without-Account/main/tests) folder as it's quite good staring point as documentation appendix.
+Run `./vendor/bin/phpunit` to run tests. See [tests](https://github.com/EscolaLMS/Assign-Without-Account/tree/main/tests) folder as it's quite good staring point as documentation appendix.
 
 Test details 
 [![codecov](https://codecov.io/gh/EscolaLMS/Assign-Without-Account/branch/main/graph/badge.svg?token=O91FHNKI6R)](https://codecov.io/gh/EscolaLMS/Assign-Without-Account)
@@ -67,4 +67,4 @@ Test details
 
 
 ## Permissions
-Permissions are defined in [seeder](https://raw.githubusercontent.com/EscolaLMS/Assign-Without-Account/main/database/seeders/AssignWithoutAccountPermissionSeeder.php)
+Permissions are defined in [seeder](https://github.com/EscolaLMS/Assign-Without-Account/tree/main/database/seeders/AssignWithoutAccountPermissionSeeder.php)

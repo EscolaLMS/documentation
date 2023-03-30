@@ -101,7 +101,7 @@ No Listeners are defined in this package.
 
 ## Tests
 
-Run `./vendor/bin/phpunit --filter 'EscolaLms\\Settings\\Tests'` to run tests. See [tests](https://raw.githubusercontent.com/EscolaLMS/settings/main/tests) folder as it's quite good staring point as documentation appendix.
+Run `./vendor/bin/phpunit --filter 'EscolaLms\\Settings\\Tests'` to run tests. See [tests](https://github.com/EscolaLMS/settings/tree/main/tests) folder as it's quite good staring point as documentation appendix.
 
 Test details:
 [![codecov](https://codecov.io/gh/EscolaLMS/settings/branch/main/graph/badge.svg?token=gBzpyNK8DQ)](https://codecov.io/gh/EscolaLMS/settings)
@@ -109,7 +109,7 @@ Test details:
 
 ## Permissions
 
-Permissions are defined in [Enum](https://raw.githubusercontent.com/EscolaLMS/settings/main/src/Enums/ReportsPermissionsEnum.php) and seeded in [Seeder](database/seeders/ReportsPermissionSeeder.php).
+Permissions are defined in [Enum](https://github.com/EscolaLMS/settings/tree/main/src/Enums/ReportsPermissionsEnum.php) and seeded in [Seeder](database/seeders/ReportsPermissionSeeder.php).
 
 ## Roadmap. Todo. Troubleshooting
 

@@ -123,7 +123,7 @@ You can see the results in the [cypress dashboard](https://dashboard.cypress.io/
 
 ## Tasks
 
-See [makefile](https://raw.githubusercontent.com/EscolaLMS/API/main/makefile) for all available devops tasks
+See [makefile](https://github.com/EscolaLMS/API/tree/main/makefile) for all available devops tasks
 
 - `make test-phpunit`
 - `make bash`

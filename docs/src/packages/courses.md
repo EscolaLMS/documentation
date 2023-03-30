@@ -33,7 +33,7 @@ All the endpoints are defined in [![swagger](https://img.shields.io/badge/docume
 
 ## Tests
 
-Run `./vendor/bin/phpunit  --filter 'EscolaLms\\Courses\\Tests'` to run tests. See [tests](https://raw.githubusercontent.com/EscolaLMS/Courses/main/tests) folder as it's quite good staring point as documentation appendix.
+Run `./vendor/bin/phpunit  --filter 'EscolaLms\\Courses\\Tests'` to run tests. See [tests](https://github.com/EscolaLMS/Courses/tree/main/tests) folder as it's quite good staring point as documentation appendix.
 
 ## Events
 
@@ -54,7 +54,7 @@ Run `./vendor/bin/phpunit  --filter 'EscolaLms\\Courses\\Tests'` to run tests. S
 
 ## Permissions
 
-Permissions are defined in [seeder](https://raw.githubusercontent.com/EscolaLMS/Courses/main/vendor/escolalms/courses/database/seeders/CoursesPermissionSeeder.php)
+Permissions are defined in [seeder](https://github.com/EscolaLMS/Courses/tree/main/vendor/escolalms/courses/database/seeders/CoursesPermissionSeeder.php)
 
 
 ## Model relation
@@ -69,7 +69,7 @@ class User extends EscolaLms\Core\Models\User
 
 ## Database relation
 
-There is simple relation. [see docs for diagram](https://raw.githubusercontent.com/EscolaLMS/Courses/main/doc)
+There is simple relation. [see docs for diagram](https://github.com/EscolaLMS/Courses/tree/main/doc)
 
 1. `Course` general category of the course
 2. `Lesson` grouped by Course
@@ -83,7 +83,7 @@ Topic 1 -> 1 TopicContent
 
 `TopicContent` is an abstract model, this package contains some sample implementatio eg, `RichText`, `Audio`, `Video`, `H5P` and `Image`
 
-You create any of the Content model by post to the same Topic endponit (create and update), [see docs examples](https://raw.githubusercontent.com/EscolaLMS/Courses/main/doc)
+You create any of the Content model by post to the same Topic endponit (create and update), [see docs examples](https://github.com/EscolaLMS/Courses/tree/main/doc)
 
 **Note** that `/api/topics` is using `form-data` - this is due to PHP nature of posting files
 
@@ -124,7 +124,7 @@ class CustomServiceProvider extends ServiceProvider
 }
 ```
 
-see [EscolaLmsCourseServiceProvider.php](https://raw.githubusercontent.com/EscolaLMS/Courses/main/src/EscolaLmsCourseServiceProvider.php) as reference as well as [Models/TopicContent](package2/src/Models/TopicContent)
+see [EscolaLmsCourseServiceProvider.php](https://github.com/EscolaLMS/Courses/tree/main/src/EscolaLmsCourseServiceProvider.php) as reference as well as [Models/TopicContent](package2/src/Models/TopicContent)
 
 ### Content
 

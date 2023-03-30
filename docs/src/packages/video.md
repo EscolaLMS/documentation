@@ -13,7 +13,7 @@ Coverts TopicVideo into HLS stream.
 
 ## Requirements
 - `ffmpeg` must be installed
-- Once `EscolaLms\TopicType\TopicTypeChanged` is dispatched job [ProccessVideo](https://raw.githubusercontent.com/EscolaLMS/Video/main/src/Jobs/ProccessVideo.php) added to queue
+- Once `EscolaLms\TopicType\TopicTypeChanged` is dispatched job [ProccessVideo](https://github.com/EscolaLMS/Video/tree/main/src/Jobs/ProccessVideo.php) added to queue
 
 ## Configuration
 You can configure the quality and resolution of the processed video by setting values in `config.php` file under the `bitrates` key. The key takes arrays of values.
@@ -80,7 +80,7 @@ The processing status is saved in the json field in the `topics` table:
 ```
 
 ## Tests
-Run `./vendor/bin/phpunit` to run tests. See [tests](https://raw.githubusercontent.com/EscolaLMS/Video/main/tests) folder as it's quite good staring point as documentation appendix.
+Run `./vendor/bin/phpunit` to run tests. See [tests](https://github.com/EscolaLMS/Video/tree/main/tests) folder as it's quite good staring point as documentation appendix.
 
 Test details
 [![codecov](https://codecov.io/gh/EscolaLMS/Video/branch/main/graph/badge.svg?token=O91FHNKI6R)](https://codecov.io/gh/EscolaLMS/Video)

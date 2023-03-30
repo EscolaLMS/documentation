@@ -52,4 +52,4 @@ Run `./vendor/bin/phpunit` to run tests. Test details
 
 ## Permissions
 
-Permissions are defined in [seeder](https://raw.githubusercontent.com/EscolaLMS/CSV-Users/main/database/seeders/CsvUsersPermissionSeeder.php)
+Permissions are defined in [seeder](https://github.com/EscolaLMS/CSV-Users/tree/main/database/seeders/CsvUsersPermissionSeeder.php)

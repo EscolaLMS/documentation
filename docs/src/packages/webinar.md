@@ -32,7 +32,7 @@ All the endpoints are defined in [![swagger](https://img.shields.io/badge/docume
 
 ## Tests
 
-Run `./vendor/bin/phpunit --filter=Webinar` to run tests. See [tests](https://raw.githubusercontent.com/EscolaLMS/Webinar/main/tests) folder as it's quite good staring point as documentation appendix.
+Run `./vendor/bin/phpunit --filter=Webinar` to run tests. See [tests](https://github.com/EscolaLMS/Webinar/tree/main/tests) folder as it's quite good staring point as documentation appendix.
 
 Test details [![codecov](https://codecov.io/gh/EscolaLMS/Webinar/branch/main/graph/badge.svg?token=NRAN4R8AGZ)](https://codecov.io/gh/EscolaLMS/Webinar) [![phpunit](https://github.com/EscolaLMS/Webinar/actions/workflows/test.yml/badge.svg)](https://github.com/EscolaLMS/Webinar/actions/workflows/test.yml)
 
@@ -68,7 +68,7 @@ Test details [![codecov](https://codecov.io/gh/EscolaLMS/Webinar/branch/main/gra
 
 ## Permissions
 
-Permissions are defined in [seeder](https://raw.githubusercontent.com/EscolaLMS/Webinar/main/vendor/escolalms/webinar/database/seeders/WebinarsPermissionSeeder.php)
+Permissions are defined in [seeder](https://github.com/EscolaLMS/Webinar/tree/main/vendor/escolalms/webinar/database/seeders/WebinarsPermissionSeeder.php)
 
 ## Database relation
 

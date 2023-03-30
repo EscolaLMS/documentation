@@ -135,4 +135,4 @@ public function handle(Registered $event)
 
 ## Permissions
 
-Permissions are defined in [seeder](https://raw.githubusercontent.com/EscolaLMS/Auth/main/database/seeders/AuthPermissionSeeder.php).
+Permissions are defined in [seeder](https://github.com/EscolaLMS/Auth/tree/main/database/seeders/AuthPermissionSeeder.php).

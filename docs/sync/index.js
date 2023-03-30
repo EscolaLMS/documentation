@@ -29,9 +29,19 @@ const downloadFile = (url, filename, repoName) => {
       if (response.statusCode < 300) {
         if (url.toLowerCase().includes(".md")) {
           body = body.toString().replace(/(?<=\]\()(.+)(?=(\)))/g, (url) => {
-            return url.includes("http")
-              ? url
-              : `https://raw.githubusercontent.com/${repoName}/main/${url}`;
+            if (!url.includes("http")) {
+              if (
+                url.includes("png") ||
+                url.includes("jpg") ||
+                url.includes("jpeg") ||
+                url.includes("gif")
+              ) {
+                return `https://raw.githubusercontent.com/${repoName}/main/${url}`;
+              } else {
+                return `https://github.com/${repoName}/tree/main/${url}`;
+              }
+            }
+            return url;
           });
         }
         fs.writeFileSync(`${__dirname}/md/${filename}`, body);

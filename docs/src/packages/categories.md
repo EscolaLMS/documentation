@@ -24,7 +24,7 @@ All the endpoints are defined in [![swagger](https://img.shields.io/badge/docume
 
 ## Tests
 
-Run `./vendor/bin/phpunit --filter 'EscolaLms\\Categories\\Tests'` to run tests. See [tests](https://raw.githubusercontent.com/EscolaLMS/Categories/main/tests) folder as it's quite good staring point as documentation appendix.
+Run `./vendor/bin/phpunit --filter 'EscolaLms\\Categories\\Tests'` to run tests. See [tests](https://github.com/EscolaLMS/Categories/tree/main/tests) folder as it's quite good staring point as documentation appendix.
 
 ### Admin panel
 
@@ -42,7 +42,7 @@ Run `./vendor/bin/phpunit --filter 'EscolaLms\\Categories\\Tests'` to run tests.
 
 ## Permissions
 
-Permissions are defined in [seeder](https://raw.githubusercontent.com/EscolaLMS/Categories/main/vendor/escolalms/categories/database/seeders/CategoriesPermissionSeeder.php)
+Permissions are defined in [seeder](https://github.com/EscolaLMS/Categories/tree/main/vendor/escolalms/categories/database/seeders/CategoriesPermissionSeeder.php)
 
 ## Features
 

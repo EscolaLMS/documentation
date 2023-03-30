@@ -18,7 +18,7 @@ The lib allows tags
 
 See [Swagger](https://escolalms.github.io/Tags/) documented endpoints.
 
-Some [tests](https://raw.githubusercontent.com/EscolaLMS/Tags/main/tests) can also be a great point of start.
+Some [tests](https://github.com/EscolaLMS/Tags/tree/main/tests) can also be a great point of start.
 
 To play the content you can use [EscolaLMS Tags](https://github.com/EscolaLMS/Tags)
 

@@ -116,7 +116,7 @@ All the endpoints are defined in [![swagger](https://img.shields.io/badge/docume
 
 ## Tests
 
-Run `./vendor/bin/phpunit` to run tests. See [tests/Mocks/Payable](https://raw.githubusercontent.com/EscolaLMS/payments/main/tests/Mocks/Payable.php) as an example how a Payable is defined.
+Run `./vendor/bin/phpunit` to run tests. See [tests/Mocks/Payable](https://github.com/EscolaLMS/payments/tree/main/tests/Mocks/Payable.php) as an example how a Payable is defined.
 
 Test details: [![codecov](https://codecov.io/gh/EscolaLMS/Files/branch/main/graph/badge.svg?token=NRAN4R8AGZ)](https://codecov.io/gh/EscolaLMS/payments)
 [![phpunit](https://github.com/EscolaLMS/payments/actions/workflows/test.yml/badge.svg)](https://github.com/EscolaLMS/payments/actions/workflows/test.yml)
@@ -146,7 +146,7 @@ No Listeners are defined in this package.
 
 ## Permissions
 
-Permissions are defined in [Enum](https://raw.githubusercontent.com/EscolaLMS/payments/main/src/Enums/CartPermissionsEnum.php) and seeded in [Seeder](database/seeders/CartPermissionSeeder.php).
+Permissions are defined in [Enum](https://github.com/EscolaLMS/payments/tree/main/src/Enums/CartPermissionsEnum.php) and seeded in [Seeder](database/seeders/CartPermissionSeeder.php).
 
 ## Roadmap. Todo. Troubleshooting
 

@@ -66,8 +66,8 @@ All the endpoints are defined in [![swagger](https://img.shields.io/badge/docume
 
 ## Tests
 
-Run `./vendor/bin/phpunit` to run tests. See [tests](https://raw.githubusercontent.com/EscolaLMS/Cart/main/tests) directory as it's a quite good starting point for understanding how this package works.
-Especially pay attention to [tests/Mocks](https://raw.githubusercontent.com/EscolaLMS/Cart/main/tests/Mocks) directory, as it represents core concepts of Productable and use of Productable Trait & Interface.
+Run `./vendor/bin/phpunit` to run tests. See [tests](https://github.com/EscolaLMS/Cart/tree/main/tests) directory as it's a quite good starting point for understanding how this package works.
+Especially pay attention to [tests/Mocks](https://github.com/EscolaLMS/Cart/tree/main/tests/Mocks) directory, as it represents core concepts of Productable and use of Productable Trait & Interface.
 
 Test details [![codecov](https://codecov.io/gh/EscolaLMS/cart/branch/main/graph/badge.svg?token=NRAN4R8AGZ)](https://codecov.io/gh/EscolaLMS/cart) [![phpunit](https://github.com/EscolaLMS/cart/actions/workflows/test.yml/badge.svg)](https://github.com/EscolaLMS/cart/actions/workflows/test.yml)
 
@@ -115,7 +115,7 @@ Test details [![codecov](https://codecov.io/gh/EscolaLMS/cart/branch/main/graph/
 
 ## Permissions
 
-Permissions are defined in [Enum](https://raw.githubusercontent.com/EscolaLMS/Cart/main/src/Enums/CartPermissionsEnum.php) and seeded in [Seeder](database/seeders/CartPermissionSeeder.php).
+Permissions are defined in [Enum](https://github.com/EscolaLMS/Cart/tree/main/src/Enums/CartPermissionsEnum.php) and seeded in [Seeder](database/seeders/CartPermissionSeeder.php).
 
 ## Roadmap. Todo. Troubleshooting
 

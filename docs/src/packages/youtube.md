@@ -40,6 +40,6 @@ Or you can generated refresh token manual and enter for variable `services.youtu
   
 ## Tests
 
-Run `./vendor/bin/phpunit --filter=Youtube` to run tests. See [tests](https://raw.githubusercontent.com/EscolaLMS/Youtube/main/tests) folder as it's quite good staring point as documentation appendix.
+Run `./vendor/bin/phpunit --filter=Youtube` to run tests. See [tests](https://github.com/EscolaLMS/Youtube/tree/main/tests) folder as it's quite good staring point as documentation appendix.
 
 Test details [![codecov](https://codecov.io/gh/EscolaLMS/Youtube/branch/main/graph/badge.svg?token=NRAN4R8AGZ)](https://codecov.io/gh/EscolaLMS/Youtube) [![phpunit](https://github.com/EscolaLMS/Youtube/actions/workflows/test.yml/badge.svg)](https://github.com/EscolaLMS/Youtube/actions/workflows/test.yml)

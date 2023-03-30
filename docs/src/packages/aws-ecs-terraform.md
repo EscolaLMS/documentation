@@ -21,7 +21,7 @@ Follow those steps to create instance of Wellms Headless LMS in your AWS environ
 
 ## 4. Replace `escola-terraform-states-all` with name of your bucket from previous point.
 
-- in file [main.tf](https://raw.githubusercontent.com/EscolaLMS/aws-ecs-terraform/main/main.tf), line 9 replace `escola-terraform-states-all` with your s3 bucket name name.
+- in file [main.tf](https://github.com/EscolaLMS/aws-ecs-terraform/tree/main/main.tf), line 9 replace `escola-terraform-states-all` with your s3 bucket name name.
 
 before
 
