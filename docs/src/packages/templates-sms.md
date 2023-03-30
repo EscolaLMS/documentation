@@ -15,7 +15,7 @@ This package supports sending sms via twilio.
 
 ## Configuration
 You can configure the connection to Twilio through keys in the `.env` file:
-- `TWILIO_SID` - twilio SID unique key
+- `TWILIO_SID` - twilio SID unique key 
 - `TWILIO_TOKEN` - twilio auth token
 - `TWILIO_FROM` - twilio phone number
 - `TWILIO_SSL_VERIFY` - twilio ssl verify
@@ -89,3 +89,4 @@ public function testSms() {
     Sms::assertSent($phone1, fn($sms) => $sms->content === 'Sms message');
 }
 ```
+

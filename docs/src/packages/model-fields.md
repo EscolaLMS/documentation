@@ -8,6 +8,7 @@
 [![downloads](https://img.shields.io/packagist/l/escolalms/model-fields)](https://packagist.org/packages/escolalms/model-fields)
 [![Maintainability](https://api.codeclimate.com/v1/badges/2418459a02bbf642253e/maintainability)](https://codeclimate.com/github/EscolaLMS/model-fields/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/2418459a02bbf642253e/test_coverage)](https://codeclimate.com/github/EscolaLMS/model-fields/test_coverage)
+[![Mutation testing badge](https://img.shields.io/endpoint?style=flat&url=https%3A%2F%2Fbadge-api.stryker-mutator.io%2Fgithub.com%2FEscolaLMS%2Fmodel-fields%2Fmain)](https://dashboard.stryker-mutator.io/reports/github.com/EscolaLMS/model-fields/main)
 
 ## What does it do
 
@@ -15,7 +16,7 @@ This package allows you to add unlimited extra primitive fields to any model.
 
 Types of fields that can be user
 
-- boolean
+- booleandoc
 - number
 - varchar
 - text
@@ -426,11 +427,11 @@ Example in admin panel
 
 **List of user model fields**
 
-![List of user model fields](./docs/list.png "List of user model fields")
+![List of user model fields](https://raw.githubusercontent.com/EscolaLMS/model-fields/main/docs/list.png "List of user model fields")
 
 **Creating/editing model field**
 
-![Creating/editing model field](./docs/edit.png "Creating/editing model field")
+![Creating/editing model field](https://raw.githubusercontent.com/EscolaLMS/model-fields/main/docs/edit.png "Creating/editing model field")
 
 ### Front Application
 
@@ -438,7 +439,7 @@ See example above how to extend controllers to CRUD model fields to give model
 
 ## Permissions
 
-Permissions are defined in [seeder](https://github.com/EscolaLMS/model-fields/blob/main/database/seeders/PermissionTableSeeder.php)
+Permissions are defined in [seeder](https://github.com/EscolaLMS/model-fields/tree/main/packages/model-fields/database/seeders/PermissionTableSeeder.php)
 
 ## Roadmap. Todo. Troubleshooting.
 

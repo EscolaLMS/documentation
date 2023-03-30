@@ -89,19 +89,19 @@ No Listeners are defined in this package.
 
 #### **Left menu**
 
-![Admin panel menu](./docs/settings/menu.png "Admin panel menu")
+![Admin panel menu](https://raw.githubusercontent.com/EscolaLMS/settings/main/docs/menu.png "Admin panel menu")
 
 #### **List of registered Settings for single package (EscolaLms\Auth package used in screenshot)**
 
-![List of registered settings for single package](./docs/settings/list.png "List of registered settings for single package")
+![List of registered settings for single package](https://raw.githubusercontent.com/EscolaLMS/settings/main/docs/list.png "List of registered settings for single package")
 
 #### **Editing registered Setting**
 
-![Editing registered Setting](./docs/settings/edit.png "Editing registered Setting")
+![Editing registered Setting](https://raw.githubusercontent.com/EscolaLMS/settings/main/docs/edit.png "Editing registered Setting")
 
 ## Tests
 
-Run `./vendor/bin/phpunit --filter 'EscolaLms\\Settings\\Tests'` to run tests. See [tests](https://github.com/EscolaLMS/Settings/blob/main/tests) folder as it's quite good staring point as documentation appendix.
+Run `./vendor/bin/phpunit --filter 'EscolaLms\\Settings\\Tests'` to run tests. See [tests](https://github.com/EscolaLMS/settings/tree/main/tests) folder as it's quite good staring point as documentation appendix.
 
 Test details:
 [![codecov](https://codecov.io/gh/EscolaLMS/settings/branch/main/graph/badge.svg?token=gBzpyNK8DQ)](https://codecov.io/gh/EscolaLMS/settings)
@@ -109,7 +109,7 @@ Test details:
 
 ## Permissions
 
-Permissions are defined in [Enum](https://github.com/EscolaLMS/settings/blob/main/src/Enums/SettingsPermissionsEnum.php) and seeded in [Seeder](https://github.com/EscolaLMS/settings/blob/main/database/seeders/PermissionTableSeeder.php).
+Permissions are defined in [Enum](https://github.com/EscolaLMS/settings/tree/main/src/Enums/ReportsPermissionsEnum.php) and seeded in [Seeder](database/seeders/ReportsPermissionSeeder.php).
 
 ## Roadmap. Todo. Troubleshooting
 

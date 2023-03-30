@@ -7,6 +7,7 @@
 [![downloads](https://img.shields.io/packagist/v/escolalms/cart)](https://packagist.org/packages/escolalms/cart)
 [![downloads](https://img.shields.io/packagist/l/escolalms/cart)](https://packagist.org/packages/escolalms/cart)
 [![Maintainability](https://api.codeclimate.com/v1/badges/b8c8aa16976961f670b4/maintainability)](https://codeclimate.com/github/EscolaLMS/Cart/maintainability)
+[![Mutation testing badge](https://img.shields.io/endpoint?style=flat&url=https%3A%2F%2Fbadge-api.stryker-mutator.io%2Fgithub.com%2FEscolaLMS%2FCart%2Fmain)](https://dashboard.stryker-mutator.io/reports/github.com/EscolaLMS/Cart/main)
 
 ## Purpose
 
@@ -61,12 +62,12 @@ Shop Service contains functionality related to managing Cart content (adding/rem
 
 ## Endpoints
 
-All the endpoints are defined in [![swagger](https://img.shields.io/badge/documentation-swagger-green)](https://escolalms.github.io/Cart/).
+All the endpoints are defined in [![swagger](https://img.shields.io/badge/documentation-swagger-green)](https://escolalms.github.io/cart/).
 
 ## Tests
 
-Run `./vendor/bin/phpunit` to run tests. See [tests](tests) directory as it's a quite good starting point for understanding how this package works.
-Especially pay attention to [tests/Mocks](tests/Mocks) directory, as it represents core concepts of Productable and use of Productable Trait & Interface.
+Run `./vendor/bin/phpunit` to run tests. See [tests](https://github.com/EscolaLMS/Cart/tree/main/tests) directory as it's a quite good starting point for understanding how this package works.
+Especially pay attention to [tests/Mocks](https://github.com/EscolaLMS/Cart/tree/main/tests/Mocks) directory, as it represents core concepts of Productable and use of Productable Trait & Interface.
 
 Test details [![codecov](https://codecov.io/gh/EscolaLMS/cart/branch/main/graph/badge.svg?token=NRAN4R8AGZ)](https://codecov.io/gh/EscolaLMS/cart) [![phpunit](https://github.com/EscolaLMS/cart/actions/workflows/test.yml/badge.svg)](https://github.com/EscolaLMS/cart/actions/workflows/test.yml)
 
@@ -94,24 +95,28 @@ Test details [![codecov](https://codecov.io/gh/EscolaLMS/cart/branch/main/graph/
 
 #### **Left menu**
 
-![Admin panel menu](./docs/cart/menu.png "Admin panel menu")
+![Admin panel menu](https://raw.githubusercontent.com/EscolaLMS/Cart/main/docs/menu.png "Admin panel menu")
 
 #### **List of Products**
 
-![List of Products](./docs/cart/products-list.png "List of Products")
+![List of Products](https://raw.githubusercontent.com/EscolaLMS/Cart/main/docs/products-list.png "List of Products")
 
 #### **Creating/editing Product**
 
-![Creating/editing Product](./docs/cart/products-edit.png "Creating/editing Product")
+![Creating/editing Product](https://raw.githubusercontent.com/EscolaLMS/Cart/main/docs/products-edit.png "Creating/editing Product")
 
 #### **List of Orders**
 
-![List of Orders](./docs/cart/orders-list.png "List of Orders")
+![List of Orders](https://raw.githubusercontent.com/EscolaLMS/Cart/main/docs/orders-list.png "List of Orders")
 
+#### **Details of Order**
+
+![Details of Order](https://raw.githubusercontent.com/EscolaLMS/Cart/main/docs/orders-details.png "Details of Order")
 
 ## Permissions
 
-Permissions are defined in [Enum](https://github.com/EscolaLMS/Cart/blob/main/src/Enums/CartPermissionsEnum.php) and seeded in [Seeder](https://github.com/EscolaLMS/Cart/blob/main/database/seeders/CartPermissionSeeder.php).
+Permissions are defined in [Enum](https://github.com/EscolaLMS/Cart/tree/main/src/Enums/CartPermissionsEnum.php) and seeded in [Seeder](database/seeders/CartPermissionSeeder.php).
 
 ## Roadmap. Todo. Troubleshooting
 
+- ???

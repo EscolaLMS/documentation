@@ -30,19 +30,19 @@ Run `./vendor/bin/phpunit --filter 'EscolaLms\\Categories\\Tests'` to run tests.
 
 **Left menu**
 
-![Menu](./docs/categories/menu.png "Menu")
+![Menu](https://raw.githubusercontent.com/EscolaLMS/Categories/main/docs/menu.png "Menu")
 
 **List of consultations**
 
-![List of categories](./docs/categories/list.png "List of categories")
+![List of categories](https://raw.githubusercontent.com/EscolaLMS/Categories/main/docs/list.png "List of categories")
 
 **Creating/editing consultation**
 
-![Creating/editing category](./docs/categories/create.png "Creating or editing category")
+![Creating/editing category](https://raw.githubusercontent.com/EscolaLMS/Categories/main/docs/create.png "Creating or editing category")
 
 ## Permissions
 
-Permissions are defined in [seeder](https://github.com/EscolaLMS/Categories/blob/main/database/seeders/CategoriesPermissionSeeder.php)
+Permissions are defined in [seeder](https://github.com/EscolaLMS/Categories/tree/main/vendor/escolalms/categories/database/seeders/CategoriesPermissionSeeder.php)
 
 ## Features
 

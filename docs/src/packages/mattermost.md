@@ -14,7 +14,7 @@
 
 This package is used for [Mattermost](https://mattermost.com/) integration.
 
-It listens for Events then add/remove user for mattermost and particular channels either as standard user or admin.
+It listens for Events then add/remove user for mattermost and particular channels either as standard user or admin. 
 
 
 ## Installing
@@ -63,7 +63,7 @@ All the endpoints are defined in [![swagger](https://img.shields.io/badge/docume
 
 ## Test
 Run `./vendor/bin/phpunit` to run tests. See tests folder as it's quite good staring point as documentation appendix.
-Test details
+Test details 
 [![codecov](https://codecov.io/gh/EscolaLMS/Mattermost/branch/main/graph/badge.svg?token=NRAN4R8AGZ)](https://codecov.io/gh/EscolaLMS/Mattermost)
 [![phpunit](https://github.com/EscolaLMS/Mattermost/actions/workflows/test.yml/badge.svg)](https://github.com/EscolaLMS/Mattermost/actions/workflows/test.yml)
 
@@ -78,10 +78,10 @@ Handling events
 - `EscolaLms\Courses\Events\CourseTutorUnassigned` => remove user from course channel
 - `EscolaLms\Webinar\Events\WebinarUserAssigned` => add user to webinar channel with member role
 - `EscolaLms\Webinar\Events\WebinarUserUnassigned` => remove user from webinar channel
-- `EscolaLms\Webinar\Events\WebinarTrainerAssigned` => add user to webinar channel with channel_admin role
+- `EscolaLms\Webinar\Events\WebinarTrainerAssigned` => add user to webinar channel with channel_admin role 
 - `EscolaLms\Webinar\Events\WebinarTrainerUnassigned` => remove user from webinar channel
 
 ## How to use this on frontend
 ### Admin panel
 **Settings**
-![Settings](./docs/mattermost/settings.png "Settings")
+![Settings](https://raw.githubusercontent.com/EscolaLMS/Mattermost/main/docs/settings.png "Settings")

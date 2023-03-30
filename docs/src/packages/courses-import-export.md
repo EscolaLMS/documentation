@@ -42,4 +42,4 @@ Test details
 
 
 ## Permissions
-Permissions are defined in [seeder](https://github.com/EscolaLMS/Courses-Import-Export/blob/main/database/seeders/CoursesExportImportPermissionSeeder.php)
+Permissions are defined in [seeder](https://github.com/EscolaLMS/Courses-Import-Export/tree/main/database/seeders/CoursesExportImportPermissionSeeder.php)

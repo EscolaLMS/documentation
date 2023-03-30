@@ -1,5 +1,4 @@
 # Consultations
-
 One to one conversation package
 
 [![swagger](https://img.shields.io/badge/documentation-swagger-green)](https://escolalms.github.io/Consultations/)
@@ -44,7 +43,7 @@ Test details [![codecov](https://codecov.io/gh/EscolaLMS/Consultations/branch/ma
 - `EscolaLms\Consultations\Events\RejectTerm` => Event is dispatched when trainer rejects term reported with buyer. Event refers to users, who have permissions students
 - `EscolaLms\Consultations\Events\RejectTermWithTrainer` => Event is dispatched when trainer rejects term reported with buyer. Event refers to users, who have permissions tutor
 - `EscolaLms\Consultations\Events\ReminderAboutTerm` => Event is dispatched after execute cron job `EscolaLms\Consultations\Jobs\ReminderAboutConsultationJob`, Event is dispatched when deadline for purchased consultation before 1 hours and 1 day. Event refers to users, who have permissions students
-- `EscolaLms\Consultations\Events\ReminderTrainerAboutTerm` => Event is dispatched some time before start consultation. Event refers to users, who have permissions tutor
+- `EscolaLms\Consultations\Events\ReminderTrainerAboutTerm` => Event is dispatched some time before start consultation. Event refers to users, who have permissions tutor 
 - `EscolaLms\Consultations\Events\ReportTerm` => Event is dispatched after reported term with buyer consultation
 
 ## Listeners
@@ -57,63 +56,23 @@ Test details [![codecov](https://codecov.io/gh/EscolaLMS/Consultations/branch/ma
 
 **Left menu**
 
-![Menu](./docs/consultations/menu.png "Menu")
+![Menu](https://raw.githubusercontent.com/EscolaLMS/Consultations/main/docs/menu.png "Menu")
 
 **List of consultations**
 
-![List of consultations](./docs/consultations/list.png "List of consultations")
+![List of consultations](https://raw.githubusercontent.com/EscolaLMS/Consultations/main/docs/list.png "List of consultations")
 
 **Creating/editing consultation**
 
-![Creating/editing consultation](./docs/consultations/new_consultation.png "Creating or editing consultation")
+![Creating/editing consultation](https://raw.githubusercontent.com/EscolaLMS/Consultations/main/docs/new_consultation.png "Creating or editing consultation")
 
 ### Front Application
 
-For the frontend to be able to run the consultation, it is necessary to use this package in the case of integration with react [React SDK](https://jitsi.github.io/handbook/docs/dev-guide/dev-guide-react-sdk) or iframe api in case of other integrations [IFrame API](https://jitsi.github.io/handbook/docs/dev-guide/dev-guide-iframe)
-
-```tsx
-import { useState } from "react";
-import * as API from "@escolalms/sdk/lib/types/api";
-import { JitsiMeeting } from "@jitsi/react-sdk";
-import styles from "./jitsy.module.scss";
-
-const JitsyBox: React.FC<{
-  JitsyData: API.JitsyData | null;
-  close: () => void;
-}> = ({ JitsyData, close }) => {
-  const [jitsyIsReady, setJitsyIsReady] = useState(false);
-
-  const handleReadyToClose = () => {
-    close();
-  };
-
-  return (
-    <div className={styles.jitsy_box}>
-      {JitsyData && (
-        <JitsiMeeting
-          {...JitsyData.data}
-          configOverwrite={{
-            ...JitsyData.data.configOverwrite,
-          }}
-          interfaceConfigOverwrite={{
-            ...JitsyData.data.interfaceConfigOverwrite,
-          }}
-          getIFrameRef={(iframeRef) => {
-            //iframe style definition
-          }}
-          onReadyToClose={handleReadyToClose}
-        />
-      )}
-    </div>
-  );
-};
-
-export default JitsyBox;
-```
+...
 
 ## Permissions
 
-Permissions are defined in [seeder](https://github.com/EscolaLMS/Consultations/blob/main/database/seeders/ConsultationsPermissionSeeder.php)
+Permissions are defined in [seeder](https://github.com/EscolaLMS/Consultations/tree/main/vendor/escolalms/consultations/database/seeders/ConsultationsPermissionSeeder.php)
 
 ## Database relation
 
@@ -122,7 +81,6 @@ Permissions are defined in [seeder](https://github.com/EscolaLMS/Consultations/b
 3. `Categories` Consultation belongs to many with models Categories
 4. `Users` Consultation is related belongs to many with User which bought consultation
 5. `Terms` Consultation model has many to models ConsultationUserPivot. It is reported terms
-
 ```
 Consultation 1 -> 1 Author
 Consultation 1 -> n ProposedTerms

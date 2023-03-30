@@ -54,16 +54,20 @@ Test details [![codecov](https://codecov.io/gh/EscolaLMS/Templates-Email/branch/
 
 #### **Left menu**
 
-![Menu](./docs/templates-email/menu.png "Menu")
+![Menu](https://raw.githubusercontent.com/EscolaLMS/Templates-Email/main/docs/menu.png "Menu")
 
 #### **List of templates**
 
-![List of templates](./docs/templates-email/list.png "List of templates")
+![List of templates](https://raw.githubusercontent.com/EscolaLMS/Templates-Email/main/docs/list.png "List of templates")
 
 #### **Creating/editing template**
 
-![Creating/editing template](./docs/templates-email/edit.png "Creating or editing template")
+![Creating/editing template](https://raw.githubusercontent.com/EscolaLMS/Templates-Email/main/docs/edit.png "Creating or editing template")
 
 ## Permissions
 
 No Permissions defined for this package.
+
+## Roadmap. Todo. Troubleshooting
+
+- ???

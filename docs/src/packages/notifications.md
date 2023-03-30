@@ -40,15 +40,15 @@ Test details:
 
 #### **Left menu**
 
-![Menu](./docs/notifications/menu.png "Menu")
+![Menu](https://raw.githubusercontent.com/EscolaLMS/Notifications/main/docs/menu.png "Menu")
 
 #### **List of notifications**
 
-![List of notifications](./docs/notifications/list.png "List of notifications")
+![List of notifications](https://raw.githubusercontent.com/EscolaLMS/Notifications/main/docs/list.png "List of notifications")
 
 ## Permissions
 
-Permissions are defined in [seeder](https://github.com/EscolaLMS/Notifications/blob/main/database/seeders/NotificationsPermissionsSeeder.php)
+Permissions are defined in [seeder](https://github.com/EscolaLMS/Notifications/tree/main/vendor/escolalms/notifications/database/seeders/NotificationsPermissionsSeeder.php)
 
 ## Events
 
@@ -58,3 +58,6 @@ No Events are defined in this package.
 
 - `EscolaLms\Notifications\Listeners\NotifiableEventListener` - this listener listens to all events in `EscolaLms` namespace
 
+## Roadmap. Todo. Troubleshooting
+
+- ???

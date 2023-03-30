@@ -9,6 +9,7 @@ Courses and content package
 [![downloads](https://img.shields.io/packagist/v/escolalms/courses)](https://packagist.org/packages/escolalms/courses)
 [![downloads](https://img.shields.io/packagist/l/escolalms/courses)](https://packagist.org/packages/escolalms/courses)
 [![Maintainability](https://api.codeclimate.com/v1/badges/0c9e2593fb30e2048f95/maintainability)](https://codeclimate.com/github/EscolaLMS/Courses/maintainability)
+[![Mutation testing badge](https://img.shields.io/endpoint?style=flat&url=https%3A%2F%2Fbadge-api.stryker-mutator.io%2Fgithub.com%2FEscolaLMS%2FCourses%2Fmain)](https://dashboard.stryker-mutator.io/reports/github.com/EscolaLMS/Courses/main)
 
 ## What does it do
 
@@ -49,23 +50,11 @@ Run `./vendor/bin/phpunit  --filter 'EscolaLms\\Courses\\Tests'` to run tests. S
 - `EscolaLms\Courses\Events\CourseUnassigned` => Event is dispatched when user is unassigned to course.
 - `EscolaLms\Courses\Events\TopicFinished` => Event is dispatched when course topic is finished.
 
-### Admin panel
 
-**Left menu**
-
-![Menu](./docs/courses/menu_course.png "Menu")
-
-**List of courses**
-
-![List of courses](./docs/courses/list_courses.png "List of courses")
-
-**Creating/editing course**
-
-![Creating/editing course](./docs/courses/create_course.png "Creating or editing course")
 
 ## Permissions
 
-Permissions are defined in [seeder](https://github.com/EscolaLMS/Courses/blob/main/database/seeders/CoursesPermissionSeeder.php)
+Permissions are defined in [seeder](https://github.com/EscolaLMS/Courses/tree/main/vendor/escolalms/courses/database/seeders/CoursesPermissionSeeder.php)
 
 
 ## Model relation
@@ -135,7 +124,7 @@ class CustomServiceProvider extends ServiceProvider
 }
 ```
 
-see [EscolaLmsCourseServiceProvider.php](https://github.com/EscolaLMS/Courses/blob/main/src/EscolaLmsCourseServiceProvider.php) as reference as well as [Models/TopicContent](https://github.com/EscolaLMS/Courses/tree/main/src/Models/TopicContent)
+see [EscolaLmsCourseServiceProvider.php](https://github.com/EscolaLMS/Courses/tree/main/src/EscolaLmsCourseServiceProvider.php) as reference as well as [Models/TopicContent](package2/src/Models/TopicContent)
 
 ### Content
 

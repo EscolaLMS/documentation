@@ -7,6 +7,7 @@
 [![downloads](https://img.shields.io/packagist/v/escolalms/payments)](https://packagist.org/packages/escolalms/payments)
 [![downloads](https://img.shields.io/packagist/l/escolalms/payments)](https://packagist.org/packages/escolalms/payments)
 [![Maintainability](https://api.codeclimate.com/v1/badges/e42a94f20c76b719fc38/maintainability)](https://codeclimate.com/github/EscolaLMS/payments/maintainability)
+[![Mutation testing badge](https://img.shields.io/endpoint?style=flat&url=https%3A%2F%2Fbadge-api.stryker-mutator.io%2Fgithub.com%2FEscolaLMS%2Fpayments%2Fmain)](https://dashboard.stryker-mutator.io/reports/github.com/EscolaLMS/payments/main)
 
 ## Purpose
 
@@ -115,7 +116,7 @@ All the endpoints are defined in [![swagger](https://img.shields.io/badge/docume
 
 ## Tests
 
-Run `./vendor/bin/phpunit` to run tests. See [tests/Mocks/Payable](https://github.com/EscolaLMS/payments/blob/main/tests/Mocks/Payable.php) as an example how a Payable is defined.
+Run `./vendor/bin/phpunit` to run tests. See [tests/Mocks/Payable](https://github.com/EscolaLMS/payments/tree/main/tests/Mocks/Payable.php) as an example how a Payable is defined.
 
 Test details: [![codecov](https://codecov.io/gh/EscolaLMS/Files/branch/main/graph/badge.svg?token=NRAN4R8AGZ)](https://codecov.io/gh/EscolaLMS/payments)
 [![phpunit](https://github.com/EscolaLMS/payments/actions/workflows/test.yml/badge.svg)](https://github.com/EscolaLMS/payments/actions/workflows/test.yml)
@@ -137,12 +138,16 @@ No Listeners are defined in this package.
 
 #### **Left Menu**
 
-![Admin panel menu](./docs/payments/menu.png "Admin panel menu")
+![Admin panel menu](https://raw.githubusercontent.com/EscolaLMS/payments/main/docs/menu.png "Admin panel menu")
 
 #### **List of Payments**
 
-![List of Payments](./docs/payments/list.png "List of Payments")
+![List of Payments](https://raw.githubusercontent.com/EscolaLMS/payments/main/docs/list.png "List of Payments")
 
 ## Permissions
 
-Permissions are defined in [Enum](https://github.com/EscolaLMS/payments/blob/main/src/Enums/PaymentsPermissionsEnum.php) and seeded in [Seeder](https://github.com/EscolaLMS/payments/blob/main/database/seeders/PaymentsPermissionsSeeder.php).
+Permissions are defined in [Enum](https://github.com/EscolaLMS/payments/tree/main/src/Enums/CartPermissionsEnum.php) and seeded in [Seeder](database/seeders/CartPermissionSeeder.php).
+
+## Roadmap. Todo. Troubleshooting
+
+- ???

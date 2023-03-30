@@ -1,5 +1,5 @@
 # Assign-Without-Account
-[![swagger](https://img.shields.io/badge/documentation-swagger-green)](https://escolalms.github.io/Assign-Without-Account/)
+[![swagger](https://img.shields.io/badge/documentation-swagger-green)](https://escolalms.github.io/AssignWithoutAccount/)
 [![codecov](https://codecov.io/gh/EscolaLMS/Assign-Without-Account/branch/main/graph/badge.svg?token=O91FHNKI6R)](https://codecov.io/gh/EscolaLMS/Assign-Without-Account)
 [![Tests PHPUnit in environments](https://github.com/EscolaLMS/Assign-Without-Account/actions/workflows/test.yml/badge.svg)](https://github.com/EscolaLMS/Assign-Without-Account/actions/workflows/test.yml)
 [![downloads](https://img.shields.io/packagist/dt/escolalms/assign-without-account)](https://packagist.org/packages/escolalms/assign-without-account)
@@ -18,7 +18,7 @@ The package is used to assign users without an account.
 You need to define email templates in the `Templates` package for `AssignToProduct` and `AssignToProductable` events.
 
 ## Database
-1. `user-submissions`
+1. `user-submissions` 
 
 | id | email | status | created\_at | updated\_at | morphable\_type | morphable\_id |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -43,14 +43,14 @@ POST /api/admin/user-submissions
 
 ## Endpoints
 All the endpoints are defined in swagger
-[![swagger](https://img.shields.io/badge/documentation-swagger-green)](https://escolalms.github.io/Assign-Without-Account/)
+[![swagger](https://img.shields.io/badge/documentation-swagger-green)](https://escolalms.github.io/AssignWithoutAccount/)
 
 ## Tests
 Run `./vendor/bin/phpunit` to run tests. See [tests](https://github.com/EscolaLMS/Assign-Without-Account/tree/main/tests) folder as it's quite good staring point as documentation appendix.
 
-Test details
+Test details 
 [![codecov](https://codecov.io/gh/EscolaLMS/Assign-Without-Account/branch/main/graph/badge.svg?token=O91FHNKI6R)](https://codecov.io/gh/EscolaLMS/Assign-Without-Account)
-[![Tests PHPUnit in environments](https://github.com/EscolaLMS/Assign-Without-Account/actions/workflows/test.yml/badge.svg)](https://github.com/EscolaLMS/Assign-Without-Account/actions/workflows/test.yml)
+![Tests PHPUnit in environments](https://github.com/EscolaLMS/Assign-Without-Account/actions/workflows/test.yml/badge.svg)
 
 ## Events
 1. `AssignToProduct` - event dispatched after assigning user to product.
@@ -63,8 +63,8 @@ Test details
 
 ### Admin panel
 **List of user submissions**
-![List of user submissions](./docs/list.png "List of user submissions")
+![List of stationary events](https://raw.githubusercontent.com/EscolaLMS/Assign-Without-Account/main/docs/list.png "List of user submissions")
 
 
 ## Permissions
-Permissions are defined in [seeder](https://github.com/EscolaLMS/Assign-Without-Account/blob/main/database/seeders/AssignWithoutAccountPermissionSeeder.php)
+Permissions are defined in [seeder](https://github.com/EscolaLMS/Assign-Without-Account/tree/main/database/seeders/AssignWithoutAccountPermissionSeeder.php)

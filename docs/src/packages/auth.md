@@ -7,6 +7,7 @@
 [![downloads](https://img.shields.io/packagist/v/escolalms/auth)](https://packagist.org/packages/escolalms/auth)
 [![downloads](https://img.shields.io/packagist/l/escolalms/auth)](https://packagist.org/packages/escolalms/auth)
 [![Maintainability](https://api.codeclimate.com/v1/badges/b8df1362d2c9363e6e6e/maintainability)](https://codeclimate.com/github/EscolaLMS/Auth/maintainability)
+[![Mutation testing badge](https://img.shields.io/endpoint?style=flat&url=https%3A%2F%2Fbadge-api.stryker-mutator.io%2Fgithub.com%2FEscolaLMS%2FAuth%2Fmain)](https://dashboard.stryker-mutator.io/reports/github.com/EscolaLMS/Auth/main)
 
 ## What does it do
 
@@ -21,6 +22,12 @@ Package for user authentication. In addition, the package includes:
 - `composer require escolalms/auth`
 - `php artisan migrate`
 - `php artisan db:seed --class="EscolaLms\Auth\Database\Seeders\AuthPermissionSeeder"`
+
+Optional: 
+- Run command `escolalms:admin`. 
+
+## Commands
+- `escolalms:admin` - create account with role admin
 
 ## Database
 
@@ -54,14 +61,14 @@ Run `./vendor/bin/phpunit` to run tests.
 - `Login` - Event is dispatched on successful login.
 - `Logout` - Event is dispatched after logout.
 - `PasswordChanged` - Event is dispatched after the password changed.
-- `ResetPassword` - Event is dispatched after resetting the password.
+- `ResetPassword` - Event is dispatched after resetting the password. 
 - `UserAddedToGroup` - Event is dispatched after adding the user to the group.
 - `UserRemovedFromGroup` - Event is dispatched after removing the user from the group.
 
 
 ## Listeners
 
-- `CreatePasswordResetToken` - The listener listens for the ForgotPassword event and executes the following method.
+- `CreatePasswordResetToken` - The listener listens for the ForgotPassword event and executes the following method. 
 ```php
 public function handle(ForgotPassword $event): void
 {
@@ -92,7 +99,7 @@ This is useful if you are using [TemplateEmail](https://github.com/EscolaLMS/Tem
  );
 ```
 
-- `SendEmailVerificationNotification` - The listener listens for the AccountRegistered event and executes the following method.
+- `SendEmailVerificationNotification` - The listener listens for the AccountRegistered event and executes the following method.  
 ```php
 public function handle(Registered $event)
 {
@@ -109,23 +116,23 @@ public function handle(Registered $event)
 ### Admin panel
 
 **List of users**
-![List of users](./docs/auth/list_of_users.png "List of users")
+![List of users](https://raw.githubusercontent.com/EscolaLMS/Auth/main/docs/list_of_users.png "List of users")
 
 **Creating/editing user**
-![Creating/editing user](./docs/auth/user_form.png "User form")
+![Creating/editing user](https://raw.githubusercontent.com/EscolaLMS/Auth/main/docs/user_form.png "User form")
 
 **User categories**
-![User categories](./docs/auth/user_categories.png "User categories")
+![User categories](https://raw.githubusercontent.com/EscolaLMS/Auth/main/docs/user_categories.png "User categories")
 
 **List of groups**
-![List of groups](./docs/auth/list_of_groups.png "List of groups")
+![List of groups](https://raw.githubusercontent.com/EscolaLMS/Auth/main/docs/list_of_groups.png "List of groups")
 
 **Creating/editing group**
-![Creating/editing group](./docs/auth/group_form.png "Creating/editing group")
+![Creating/editing group](https://raw.githubusercontent.com/EscolaLMS/Auth/main/docs/group_form.png "Creating/editing group")
 
 **My profile**
-![My profile](./docs/auth/my_profile.png "My profile")
+![My profile](https://raw.githubusercontent.com/EscolaLMS/Auth/main/docs/my_profile.png "My profile")
 
 ## Permissions
 
-Permissions are defined in [seeder](https://github.com/EscolaLMS/Auth/blob/main/database/seeders/AuthPermissionSeeder.php).
+Permissions are defined in [seeder](https://github.com/EscolaLMS/Auth/tree/main/database/seeders/AuthPermissionSeeder.php).

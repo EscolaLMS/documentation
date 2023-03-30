@@ -41,7 +41,7 @@ All the endpoints are defined in swagger [![swagger](https://img.shields.io/badg
 ## Tests
 Run `./vendor/bin/phpunit` to run tests. See [tests](https://github.com/EscolaLMS/Scorm/tree/main/tests) folder as it's quite good staring point as documentation appendix.
 
-Test details
+Test details 
 [![codecov](https://codecov.io/gh/EscolaLMS/scorm/branch/main/graph/badge.svg?token=NRAN4R8AGZ)](https://codecov.io/gh/EscolaLMS/scorm)
 [![phpunit](https://github.com/EscolaLMS/scorm/actions/workflows/test.yml/badge.svg)](https://github.com/EscolaLMS/scorm/actions/workflows/test.yml)
 
@@ -59,15 +59,15 @@ Endpoint `/api/scorm/play/{uuid}` returns the html file with the `<iframe>`.
 
 ### Admin panel
 **List of Scorm packages**
-![List of Scorm packages](./docs/scorm/list.png "List of Scorm packages")
+![List of Scorm packages](https://raw.githubusercontent.com/EscolaLMS/Scorm/main/docs/list.png "List of Scorm packages")
 
 **Scorm player**
-![Scorm player](./docs/scorm/player.png "Scorm player")
+![Scorm player](https://raw.githubusercontent.com/EscolaLMS/Scorm/main/docs/player.png "Scorm player")
 
 ## Permissions
-Permissions are defined in [seeder](https://github.com/EscolaLMS/Scorm/blob/main/database/seeders/PermissionTableSeeder.php).
+Permissions are defined in [seeder](https://github.com/EscolaLMS/Scorm/tree/main/database/seeders/PermissionTableSeeder.php).
 
 ## Todo.
-The package does not support all available scorm formats
+The package does not support all available scorm formats 
 [#1](https://github.com/EscolaLMS/Scorm/issues/13)
 [#2](https://github.com/EscolaLMS/Scorm/issues/6)

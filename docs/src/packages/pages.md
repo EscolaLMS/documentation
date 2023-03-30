@@ -32,12 +32,11 @@ Test details [![codecov](https://codecov.io/gh/EscolaLMS/Files/branch/main/graph
 
 ## Permissions
 
-Permissions are defined in [seeder](https://github.com/EscolaLMS/pages/blob/main/database/seeders/PermissionTableSeeder.php)
+Permissions are defined in [seeder](https://github.com/EscolaLMS/pages/tree/main/vendor/escolalms/pages/database/seeders/PermissionTableSeeder.php)
 
 ## Database relation
 
 1. `Author` Page is related belong to with User
-
 ```
 Page 1 -> 1 Author
 ```

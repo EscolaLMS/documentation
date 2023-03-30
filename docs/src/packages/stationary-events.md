@@ -23,7 +23,7 @@ This package is used to manage stationary events.
 1. `stationary_events` - main table, contains information about the event
 
    | id | name | description | started\_at | finished\_at | max\_participants | place | program | created\_at | updated\_at | image\_path | short\_desc | status |
-      | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+   | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
    | 1 | EdCamp 1 | Ratione velit nisi autem et et et. | 2022-07-05 16:57:57 | 2022-07-05 20:57:57 | 105 | Bruenport | NULL | 2022-04-14 08:54:03 | 2022-04-14 08:54:03 | NULL | Et nihil et ut laudantium consequatur quasi architecto et et laudantium. | draft |
    | 2 | EdCamp 2 | Qui maxime aut fugit quam ea similique. | 2022-06-19 07:18:33 | 2022-06-19 10:18:33 | 52 | Meggiemouth | NULL | 2022-04-14 08:54:04 | 2022-04-14 08:54:04 | NULL | Dignissimos libero impedit eos omnis consequuntur quos officiis sit non dolore consectetur dolore sunt. | published |
    | 3 | EdCamp 3 | Optio voluptatem labore quia voluptas non. | 2022-08-16 07:01:18 | 2022-08-16 12:01:18 | 118 | Port Paulineberg | NULL | 2022-04-14 08:54:04 | 2022-04-14 08:54:04 | NULL | Sed culpa in possimus nihil ducimus fugiat inventore. | published |
@@ -61,11 +61,11 @@ Test details [![codecov](https://codecov.io/gh/EscolaLMS/Stationary-Events/branc
 ### Admin panel
 
 **List of stationary events**
-![List of stationary events](./docs/stationary-events/list.png "List of stationary events")
+![List of stationary events](https://raw.githubusercontent.com/EscolaLMS/Stationary-Events/main/docs/list.png "List of stationary events")
 
 **Stationary event form**
-![Form](./docs/stationary-events/form.png "Form")
+![Form](https://raw.githubusercontent.com/EscolaLMS/Stationary-Events/main/docs/form.png "Form")
 
 ## Permissions
 
-Permissions are defined in [seeder](https://github.com/EscolaLMS/Stationary-Events/blob/main/database/seeders/StationaryEventPermissionSeeder.php).
+Permissions are defined in [seeder](https://github.com/EscolaLMS/Stationary-Events/tree/main/database/seeders/StationaryEventPermissionSeeder.php)
