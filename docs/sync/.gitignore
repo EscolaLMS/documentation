@@ -1,5 +1,5 @@
-md/packages
+md/packages/**.md
 !md/packages/.gitkeep
 
-md/admin-panel
+md/admin-panel/**.md
 !md/admin-panel/.gitkeep
