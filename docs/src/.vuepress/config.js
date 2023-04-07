@@ -24,12 +24,13 @@ module.exports = {
       { name: "apple-mobile-web-app-status-bar-style", content: "black" },
     ],
   ],
-
+  //theme: "@vuepress/theme-blog",
   /**
    * Theme configuration, here is the default theme configuration for VuePress.
    *
    * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
    */
+
   themeConfig: {
     repo: "EscolaLMS/documentation",
     editLinks: true,
@@ -67,12 +68,18 @@ module.exports = {
           },
         ],
       },
+      /* TODO: uncomment when posts are ready
+      {
+        text: "Blog",
+        link: "/blog/",
+      },
+      */
       {
         text: "External Links",
         items: [
           {
             text: "Road map & Freature Requests",
-            link: "https://wellms.canny.io/"
+            link: "https://wellms.canny.io/",
           },
           {
             text: "Github main page",
@@ -324,5 +331,22 @@ module.exports = {
   /**
    * Apply plugins，ref：https://v1.vuepress.vuejs.org/zh/plugin/
    */
-  plugins: ["@vuepress/plugin-back-to-top", "@vuepress/plugin-medium-zoom"],
+  plugins: [
+    "@vuepress/plugin-back-to-top",
+    "@vuepress/plugin-medium-zoom",
+    [
+      "@vuepress/blog",
+      {
+        directories: [
+          {
+            id: "blog",
+            dirname: "_blogs",
+            path: "/_blog/",
+            itemPermalink: "/blog/:year/:month/:day/:slug",
+            itemLayout: "Layout",
+          },
+        ],
+      },
+    ],
+  ],
 };
