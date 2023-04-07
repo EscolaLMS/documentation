@@ -68,10 +68,12 @@ module.exports = {
           },
         ],
       },
+      /* TODO: uncomment when posts are ready
       {
         text: "Blog",
         link: "/blog/",
       },
+      */
       {
         text: "External Links",
         items: [
