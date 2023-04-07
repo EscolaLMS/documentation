@@ -1,0 +1,26 @@
+name: Update Readmes
+
+on:
+  repository_dispatch:
+    types: [on-demand-test]
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "16.x"
+          registry-url: "https://registry.npmjs.org"
+
+      - name: Install deps
+        run: cd docs && npm i
+
+      - name: Build
+        run: cd docs && npm run sync
+
+      - name: Push 
+        run: git add . && git commit -am "Updating .md files from Organization Repositories"
