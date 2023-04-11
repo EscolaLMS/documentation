@@ -68,12 +68,10 @@ module.exports = {
           },
         ],
       },
-      /* TODO: uncomment when posts are ready
       {
         text: "Blog",
         link: "/blog/",
       },
-      */
       {
         text: "External Links",
         items: [
@@ -334,6 +332,7 @@ module.exports = {
   plugins: [
     "@vuepress/plugin-back-to-top",
     "@vuepress/plugin-medium-zoom",
+    "vuepress-plugin-mermaidjs",
     [
       "@vuepress/blog",
       {

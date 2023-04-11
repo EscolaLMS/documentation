@@ -73,9 +73,7 @@ export default {
       });
     },
     getTagURL(tag) {
-      return this.$lang === "zh-CN"
-        ? `/blog/?tag=${tag}`
-        : `/en/blog/?tag=${tag}`;
+      return `/blog/?tag=${tag}`;
     },
   },
 };

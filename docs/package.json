@@ -17,9 +17,7 @@
   "devDependencies": {
     "@vuepress/plugin-blog": "^1.9.4",
     "request": "^2.88.2",
-    "vuepress": "^1.5.3"
-  },
-  "dependencies": {
-    "@vuepress/theme-blog": "^2.3.3"
+    "vuepress": "^1.9.9",
+    "vuepress-plugin-mermaidjs": "^1.9.1"
   }
 }
