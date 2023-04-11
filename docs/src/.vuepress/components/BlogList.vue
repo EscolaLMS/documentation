@@ -2,17 +2,19 @@
   <div>
     <p v-if="loading">{{ loadingText }}</p>
     <div v-if="!loading" class="keywords banner">
+        <p>Keywords in posts:
       <a
         class="keyword"
         v-for="keywordItem in keywordList"
         v-bind:href="getTagURL(keywordItem.key)"
         >{{ `${keywordItem.key}: ${keywordItem.count}` }}</a
       >
+    </p>
     </div>
     <div class="article" v-for="page in files">
-      <a v-bind:href="page.path">{{
-        `${formatDate(page.frontmatter.published)} ${page.title}`
-      }}</a>
+        <small>{{formatDate(page.frontmatter.published)}}</small>
+      <h2><a v-bind:href="page.path">{{page.title}}</a></h2>
+      <p class="summary">{{page.frontmatter.description.summary}}</p>
       <div class="keywords">
         <a
           class="keyword"
@@ -81,8 +83,8 @@ export default {
 <style lang="stylus" scoped>
 .article {
   margin-bottom: 20px;
-  border-left: solid 5px $accentColor;
-  padding: 20px;
+  border-bottom: solid 2px $accentColor;
+  padding: 20px 0;
 }
 
 .banner {
