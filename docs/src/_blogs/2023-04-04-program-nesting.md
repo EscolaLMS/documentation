@@ -7,6 +7,7 @@ keywords:
   - Tutorial
 description:
   content: Program Nesting configuration
+  summary: Tutorial how do setup minimum nesting of topics and maximum nesting of lessons.
 ---
 
 # Program Nesting Configuration
