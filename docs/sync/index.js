@@ -64,7 +64,17 @@ const init = async () => {
           repo.full_name
         ),
         downloadFile(
+          `https://raw.githubusercontent.com/${repo.full_name}/main/readme.md`,
+          `packages/${name}.md`,
+          repo.full_name
+        ),
+        downloadFile(
           `https://raw.githubusercontent.com/${repo.full_name}/main/ADMIN.md`,
+          `admin-panel/${name}.md`,
+          repo.full_name
+        ),
+        downloadFile(
+          `https://raw.githubusercontent.com/${repo.full_name}/main/admin.md`,
           `admin-panel/${name}.md`,
           repo.full_name
         ))

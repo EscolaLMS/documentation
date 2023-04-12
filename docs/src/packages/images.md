@@ -11,11 +11,11 @@
 
 ## What does it do
 
-The package creates resized images from source by given parameters. This is a headless approach so the backend doesn't know the requested sizes before frontend requests any.
+The package creates resized images from source by given parameters. This is a headless approach so the backend doesn't know the requested sizes before frontend requests any. 
 
-The input images are stored by Laravel in any of available disk (local storage/s3/any bucket). Once a resized version is requested a cached version in created and returend. Below are examples to show the overall idea.
+The input images are stored by Laravel in any of available disk (local storage/s3/any bucket). Once a resized version is requested a cached version in created and returend. Below are examples to show the overall idea. 
 
-The initial resize is done by [Intervention/image](https://github.com/Intervention/image) with `GD` driver. That can be [configured](https://image.intervention.io/v2/introduction/configuration).
+The initial resize is done by [Intervention/image](https://github.com/Intervention/image) with `GD` driver. That can be [configured](http://image.intervention.io/getting_started/configuration). 
 
 After inital resized all the images are optimized with [image-optimizer](https://packagist.org/packages/spatie/image-optimizer).
 
@@ -38,21 +38,21 @@ For best results binaries must [be installed](https://github.com/spatie/image-op
 
 ## Examples
 
-### Default. One image as `302` redirect result .
+### Default. One image as `302` redirect result . 
 
-Basic resize is made by URL API call which redirects to new created file
+Basic resize is made by URL API call which redirects to new created file 
 
-Example `GET` call
+Example `GET` call 
 
 - `http://localhost/api/images/img?path=test.jpg&w=100` call should return resized image to width 100px
-- checks if file exsitis
-- if not, creates one with availabe libraries
-- returns 302 redirect
+- checks if file exsitis 
+- if not, creates one with availabe libraries 
+- returns 302 redirect 
 - example `http://localhost/storage/imgcache/891ee133a8bb111497d494d4c91fe292d9d16bb3.jpg` (assuming you're using local disk storage, in case of s3 location origin would differ)
 
-### Resizing many images at once. JSON array as a result.
+### Resizing many images at once. JSON array as a result. 
 
-Example `POST` call like
+Example `POST` call like 
 
 ```bash
 POST /api/images/img HTTP/1.1
@@ -102,9 +102,9 @@ generates following result
 ] 
 ```
 
-## Hashing algorithm
+## Hashing algorithm 
 
-There is simple algorithm to guess the result image URL. This allows frontend application to know the processed URL without calling API. As follows
+There is simple algorithm to guess the result image URL. This allows frontend application to know the processed URL without calling API. As follows 
 
 ```php 
 $path = 'test.jpg';
@@ -113,13 +113,13 @@ $params = ['w'=>100];
 $hash = sha1($path.json_encode($params));
 ```
 
-then result URL would be
+then result URL would be  
 
 ```php
 $output_file = $url_prefix.$hash.$extension;
 ```
 
-## Endpoint
+## Endpoint 
 
 There is API endpoints documentation [![swagger](https://img.shields.io/badge/documentation-swagger-green)](https://escolalms.github.io/Images/)
 
