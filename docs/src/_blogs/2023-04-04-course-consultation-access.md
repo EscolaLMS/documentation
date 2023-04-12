@@ -4,6 +4,7 @@ published: 2023-04-04
 keywords:
   - Admin Panel
   - Courses
+  - Consultations
   - Tutorial
 description:
   content: Course & Consultation Access
