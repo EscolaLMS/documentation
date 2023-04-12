@@ -13,7 +13,7 @@
         class="keyword"
         v-for="keywordItem in Object.values(keywordList)"
         v-bind:href="getTagURL(keywordItem.key)"
-        >{{ `${keywordItem.key}: ${keywordItem.count}` }}</a
+        >{{ `${keywordItem.key.split(" ").join("&nbsp;")}:&nbsp;${keywordItem.count}` }}</a
       >
     </p>
     </div>
