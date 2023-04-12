@@ -1,21 +1,27 @@
 <template>
   <div>
     <p v-if="loading">{{ loadingText }}</p>
+    <div v-if=" this.$route.query.tag" class="keywords banner">        
+        <p>Current Tag: {{ this.$route.query.tag }} 
+            <a class="keyword" href="/blog">clear tag [x]</a>
+        </p>
+    </div>
     <div v-if="!loading" class="keywords banner">
-        <p>Keywords in posts:
+        
+    <p>Keywords in posts:
       <a
         class="keyword"
-        v-for="keywordItem in keywordList"
+        v-for="keywordItem in Object.values(keywordList)"
         v-bind:href="getTagURL(keywordItem.key)"
         >{{ `${keywordItem.key}: ${keywordItem.count}` }}</a
       >
     </p>
     </div>
+    <h2>Posts</h2>
     <div class="article" v-for="page in files">
-        <small>{{formatDate(page.frontmatter.published)}}</small>
-      <h2><a v-bind:href="page.path">{{page.title}}</a></h2>
-      <p class="summary">{{page.frontmatter.description.summary}}</p>
-      <div class="keywords">
+      <small>{{formatDate(page.frontmatter.published)}}</small>
+      <h3><a v-bind:href="page.path">{{page.title}}</a></h3>             
+      <div class="keywords">Keywords:
         <a
           class="keyword"
           v-for="key in page.frontmatter.keywords"
@@ -23,13 +29,19 @@
           >{{ key }}</a
         >
       </div>
+      <p class="summary">{{page.frontmatter.description.summary}}
+        <br/>
+        <a v-bind:href="page.path">Read post.</a>
+    </p>
+      
+
     </div>
   </div>
 </template>
 <script>
 export default {
   data() {
-    return { loading: true, keywordMap: new Map(), keywordList: [] };
+    return { loading: true, keywordList: {} };
   },
   computed: {
     files() {
@@ -37,11 +49,7 @@ export default {
         const baseCheck = p.path.indexOf("/blog/") >= 0 && p.path.length > 10;
         if (p.frontmatter && p.frontmatter.keywords)
           p.frontmatter.keywords.forEach((keyword) => {
-            if (!this.keywordMap.has(keyword)) {
-              this.keywordMap[keyword] = this.keywordList.length;
-              this.keywordList.push({ key: keyword, count: 0 });
-            }
-            this.keywordList[this.keywordMap[keyword]].count++;
+            this.keywordList[keyword] = {key:keyword, count : this.keywordList[keyword] ? this.keywordList[keyword].count + 1 : 1}   
           });
         const advancedCheck = this.$route.query.tag
           ? p.frontmatter &&
@@ -61,9 +69,7 @@ export default {
       return blogs;
     },
     loadingText() {
-      return this.$lang === "zh-CN"
-        ? "博客列表加载中……"
-        : "Loading Blog List...";
+      return "Loading Blog List...";
     },
   },
   methods: {
@@ -87,6 +93,14 @@ export default {
   padding: 20px 0;
 }
 
+.article h3,
+.article h2 {
+    margin-top:0;
+}
+.article small {
+    font-size:11px;
+}
+
 .banner {
   display: flex;
   flex-wrap: wrap;
@@ -94,7 +108,7 @@ export default {
 }
 
 .keywords {
-  margin-top: 20px;
+  margin:0;
 }
 
 .keyword {
