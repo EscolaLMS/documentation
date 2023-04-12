@@ -1,4 +1,4 @@
-# Files
+# Files 
 
 Files browser package
 
@@ -22,7 +22,7 @@ This package is used to upload, delete and reuse files.
 
 ## Database
 
-This package adds `access_to_directories` column to the users table.
+This package adds `access_to_directories` column to the users table. 
 
 ## Endpoints
 
@@ -58,17 +58,17 @@ This package listens for events and adds or removes user access to directories.
 ### Admin panel
 
 **Left menu**
-![Menu](./docs/files/menu.png "Menu")
+![Menu](https://raw.githubusercontent.com/EscolaLMS/Files/main/docs/menu.png "Menu")
 
 **Files browser**
-![List](./docs/files/list.png "List")
+![List](https://raw.githubusercontent.com/EscolaLMS/Files/main/docs/list.png "List")
 
 **File finder**
-![Finder](./docs/files/finder.png "File finder")
+![Finder](https://raw.githubusercontent.com/EscolaLMS/Files/main/docs/finder.png "File finder")
 
 **Upload the file to the selected directory**
-![Upload](./docs/files/upload.png "Upload")
+![Upload](https://raw.githubusercontent.com/EscolaLMS/Files/main/docs/upload.png "Upload")
 
 ## Permissions
 
-Permissions are defined in [seeder](https://github.com/EscolaLMS/Files/blob/main/database/seeders/PermissionTableSeeder.php).
+Permissions are defined in [seeder](https://github.com/EscolaLMS/Files/tree/main/database/seeders/PermissionTableSeeder.php)

@@ -178,11 +178,15 @@ module.exports = {
           collapsable: false,
           children: [
             ["", "Introduction"],
-            ["core", "Core"],
 
             [
               "api",
               "API Laravel REST API. Main module that compose all Laravel packages",
+            ],
+
+            [
+              "assign-without-account",
+              "Package enabling accessing courses and products without having account.",
             ],
 
             [
@@ -191,29 +195,44 @@ module.exports = {
             ],
 
             [
-              "assign-without-account",
-              "Package enabling accessing courses and products without having account.",
+              "aws-ecs-terraform",
+              "AWS ECS Terraform configuration file for one-click installation",
             ],
-
+            ["bookmarks-notes", "Bookmarks and Notes for Course Topic"],
             ["cart", "Cart. General shop management."],
 
             ["categories", "Categories"],
+
+            ["cmi5", "cmi5 integration"],
+
+            ["components", "Frontend styleguide and components"],
+
+            ["consultation-access", "Consultation Access."],
 
             [
               "consultations",
               "Consultations. One to one conversation package with `jitsi`",
             ],
 
-            ["courses", "Courses. and content package"],
+            ["core", "Core"],
+
+            ["course-access", "Course Access."],
+
+            ["courses", "Courses. Main e-learning package"],
 
             [
-              "courses-import-export",
-              "Courses Import Export. ZIP package and duplicate feature.",
+              "create-lms-app",
+              "Bash script to install WellmsLMS with oneliner",
             ],
 
             [
               "csv-users",
               "CSV-Users. Exporting and importing users in `.csv` format",
+            ],
+
+            [
+              "courses-import-export",
+              "Courses Import Export. ZIP package and duplicate feature.",
             ],
 
             [
@@ -223,15 +242,22 @@ module.exports = {
 
             ["files", "Files. Uploading, deleting and reusing files."],
 
+            ["front", "React SPA Front Demo to show headless implementation"],
+
             ["h5p", "H5P Headless."],
+
+            ["h5p-player", "Headless H5P Player and editor components."],
 
             ["images", "Images. Responsive and compressions processing module"],
 
             ["invoices", "Invoices generation."],
 
-            ["jitsi", "Jitsi."],
+            [
+              "jitsi",
+              "This package introduce just a facade that you can use to generate parameters for jitsi player.",
+            ],
 
-            ["docker", "Docker Images."],
+            ["laravel-docker", "Laravel Docker Images."],
 
             ["lrs", "LRS xAPI Learning Record Stores"],
 
@@ -259,6 +285,11 @@ module.exports = {
             ["scorm", "Scorm. Attach Scorm packages to courses"],
 
             [
+              "sdk",
+              "Frontend API Connector. Definition of reusable components and frontend services.",
+            ],
+
+            [
               "settings",
               "Settings. Additional global fields of various types and other package setup",
             ],
@@ -267,7 +298,12 @@ module.exports = {
 
             ["tags", "Tags. Tagging for any Module"],
 
-            ["templates", "Templates."],
+            ["tasks", "Tasks. User Tasks"],
+
+            [
+              "templates",
+              "General template package that allows connecting other channels",
+            ],
 
             [
               "templates-email",
@@ -289,9 +325,15 @@ module.exports = {
               "Topic Types. List of possible Topic Types for Course content",
             ],
 
+            ["topic-type-gift", "GIFT Quiz"],
+
+            ["topic-type-project", "Topic Type Project"],
+
             ["tracker", "Tracker."],
 
-            ["translations", "Translations. (not implemented)"],
+            ["translations", "Translations."],
+
+            ["ts-models", "TypeScript Models generated from the packages."],
 
             ["video", "Video Processing. Generation `hls` streaming formats"],
 
