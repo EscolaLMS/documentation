@@ -40,7 +40,7 @@ module.exports = {
     lastUpdated: false,
     nav: [
       {
-        text: "Technical Documentations",
+        text: "Documentation",
         items: [
           {
             text: "Getting Started",
@@ -65,6 +65,10 @@ module.exports = {
           {
             text: "Tutorials",
             link: "/tutorials/",
+          },
+          {
+            text: "Demo",
+            link: "/getting-started/demo/",
           },
         ],
       },
@@ -133,28 +137,105 @@ module.exports = {
           collapsable: false,
           children: [
             ["", "Overview"],
-            /*
-            ["lorem1", "Dashboard"],
-            ["lorem2", "Users"],
-            ["lorem3", "User Groups"],
-            ["lorem4", "Orders"],
-            ["lorem5", "Payments"],
-            ["lorem6", "Courses"],
-            ["lorem7", "H5Ps"],
-            ["lorem8", "SCORMs"],
-            ["lorem9", "Consultations"],
-            ["lorem11", "Stationary Events"],
-            ["lorem12", "Products"],
-            ["lorem13", "Webinars"],
-            ["lorem14", "Templates"],
-            ["lorem15", "Files"],
-            ["lorem16", "Categories"],
-            ["lorem17", "Settings"],
-            ["lorem18", "Roles"],
-            ["lorem19", "Notifications"],
-            ["lorem20", "Questionnaires"],
-            ["lorem21", "Reports"],
-            */
+
+            [
+              "assign-without-account",
+              "Package enabling accessing courses and products without having account.",
+            ],
+            [
+              "auth",
+              "Auth. User authentication. Roles & Permission Management",
+            ],
+            ["bookmarks-notes", "Bookmarks and Notes for Course Topic"],
+
+            ["cart", "Cart. General shop management."],
+            ["categories", "Categories"],
+            ["consultation-access", "Consultation Access."],
+            [
+              "consultations",
+              "Consultations. One to one conversation package with `jitsi`",
+            ],
+            ["course-access", "Course Access."],
+
+            ["courses", "Courses. Main e-learning package"],
+
+            [
+              "courses-import-export",
+              "Courses Import Export. ZIP package and duplicate feature.",
+            ],
+            [
+              "csv-users",
+              "CSV-Users. Exporting and importing users in `.csv` format",
+            ],
+            ["fakturownia-integration", "fakturowania"],
+            ["files", "Files. Uploading, deleting and reusing files."],
+            ["h5p", "h5p"],
+            ["images", "Images. Responsive and compressions processing module"],
+            ["invoices", "Invoices generation."],
+            ["mailerlite", "MailerLite. Customized group for LMS events"],
+            ["mattermost", "Mattermost."],
+            ["model-fields", "Model Fields. Extra attributes to any model"],
+            ["notifications", "Notifications."],
+            ["pages", "Pages. Simple CMS."],
+            [
+              "payments",
+              "Payments. Facades that allows to connect payment gateways",
+            ],
+
+            ["permissions", "Permissions and Roles."],
+
+            ["questionnaire", "Questionnaire. Answers & Reports"],
+
+            ["reports", "Reports. Courses reports."],
+
+            ["scorm", "Scorm. Attach Scorm packages to courses"],
+            [
+              "settings",
+              "Settings. Additional global fields of various types and other package setup",
+            ],
+
+            ["stationary-events", "Stationary Events."],
+
+            ["tags", "Tags. Tagging for any Module"],
+
+            ["tasks", "Tasks. User Tasks"],
+            [
+              "templates-email",
+              "Templates-Email. Notification management with custom mjml templates.",
+            ],
+
+            [
+              "templates-pdf",
+              "Templates-PDF. Templates in fabric.js frontend rendering format.",
+            ],
+
+            [
+              "templates-sms",
+              "Templates-SMS. Notification management with custom templates",
+            ],
+            [
+              "templates",
+              "General template package that allows connecting other channels",
+            ],
+            ["topic-type-gift", "GIFT Quiz"],
+
+            ["topic-type-project", "Topic Type Project"],
+            ["topic-types", "Topic Types"],
+            ["tracker", "Tracker."],
+
+            ["translations", "Translations."],
+            ["video", "Video Processing. Generation `hls` streaming formats"],
+
+            [
+              "vouchers",
+              "Vouchers. E-commerce vouchers to manage cart promotion",
+            ],
+
+            [
+              "webinar",
+              "Webinar. Live video stream with `Jitsi` and `YouTube`",
+            ],
+            ["youtube", "Youtube. Package Youtube integration"],
           ],
         },
       ],
