@@ -145,3 +145,5 @@ Once you know all changes in `sdk` are working fine you can switch ro production
 You should also consider adding whole `sdk` folder into `.gitignore`
 
 **Happy development!**
+
+<Disqus/>
