@@ -96,3 +96,5 @@ Accepting term allows to send a URL with consultation (eg zoom link), dy default
 ```
 
 ![](./2023-04-04/20230411165207.png)
+
+<Disqus/>
