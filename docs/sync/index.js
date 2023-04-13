@@ -70,12 +70,12 @@ const init = async () => {
         ),
         downloadFile(
           `https://raw.githubusercontent.com/${repo.full_name}/main/ADMIN.md`,
-          `admin-panel/${name}.md`,
+          `app-guide/${name}.md`,
           repo.full_name
         ),
         downloadFile(
           `https://raw.githubusercontent.com/${repo.full_name}/main/admin.md`,
-          `admin-panel/${name}.md`,
+          `app-guide/${name}.md`,
           repo.full_name
         ))
       ];
