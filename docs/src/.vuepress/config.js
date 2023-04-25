@@ -137,7 +137,7 @@ module.exports = {
           collapsable: false,
           children: [
             ["", "Overview"],
-
+            ["tables", "General Tables, Sorting and filtering"],
             [
               "assign-without-account",
               "Package enabling accessing courses and products without having account.",
