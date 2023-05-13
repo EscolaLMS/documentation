@@ -3,3 +3,6 @@ md/packages/**.md
 
 md/admin-panel/**.md
 !md/admin-panel/.gitkeep
+
+md/app-guide/**.md
+!md/app-guide/.gitkeep

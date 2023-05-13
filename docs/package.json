@@ -11,7 +11,7 @@
   "scripts": {
     "dev": "vuepress dev src",
     "build": "vuepress build src",
-    "sync": "cd sync && node index.js && cp md/packages/*.md ../src/packages && cp md/admin-panel/*.md ../src/admin-panel "
+    "sync": "cd sync && node index.js && cp md/packages/*.md ../src/packages && cp md/app-guide/*.md ../src/app-guide "
   },
   "license": "MIT",
   "devDependencies": {
