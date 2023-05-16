@@ -20,5 +20,8 @@ jobs:
       - name: Build
         run: cd docs && npm run sync
 
-      - name: Push 
-        run: git add . && git commit -am "Updating .md files from Organization Repositories"
+      - name: Push
+        run: |
+          git config --global user.email "docs@escolalms.com"
+          git config --global user.name "Wellms Documentation Bot"
+          git add . && git commit -am "Updating .md files from Organization Repositories"
