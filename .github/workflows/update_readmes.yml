@@ -27,3 +27,4 @@ jobs:
           git config --global user.email "docs@escolalms.com"
           git config --global user.name "Wellms Documentation Bot"
           git add . && git commit -am "Updating .md files from Organization Repositories"
+          git push
