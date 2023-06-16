@@ -76,6 +76,12 @@ module.exports = {
         text: "Blog",
         link: "/blog/",
       },
+      /*
+      {
+        text: "FAQ",
+        link: "/faq/",
+      },
+      */
       {
         text: "External Links",
         items: [
@@ -101,12 +107,22 @@ module.exports = {
           },
           {
             text: "C4 model - software architecture",
-            link: "https://structurizr.com/share/75191",
+            link: "https://escolalms.github.io/c4-software-architecture/master",
+          },
+          {
+            text: "Ulam Format",
+            link: "https://escolalms.github.io/headless-format/",
           },
         ],
       },
     ],
     sidebar: {
+      "/faq/": [
+        {
+          collapsable: false,
+          children: [["", "FAQ"]],
+        },
+      ],
       "/guide/": [
         {
           title: "Guide",
