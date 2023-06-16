@@ -82,7 +82,7 @@ All open source packages are under MIT license, rest are under commercial licens
 
 ## Where can I find marketing materials in English? In Polish?
 
-Lorem ipsum
+Use contact form on the [website](https://www.wellms.io/).
 
 ## Who estimates new features if I wanted to?
 
@@ -115,4 +115,4 @@ We use AWS and OVH cloud on day to day basis. You can check our [terraform boile
 
 ## How is the issue of intellectual property and the possibility of reselling custom solutions purchased from you solved? The core is open source, and you add my customizations to it. I have my own domain and host. I receive files from you that I place in my remote repository and can do whatever I want with them, or does the code from your (Escola) GIT flow to my server and domain?
 
-Lorem ipsum.
+You have dual licensing: MIT & Commercial license

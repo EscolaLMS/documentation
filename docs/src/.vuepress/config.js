@@ -76,12 +76,11 @@ module.exports = {
         text: "Blog",
         link: "/blog/",
       },
-      /*
+
       {
         text: "FAQ",
         link: "/faq/",
       },
-      */
       {
         text: "External Links",
         items: [
@@ -120,7 +119,11 @@ module.exports = {
       "/faq/": [
         {
           collapsable: false,
-          children: [["", "FAQ"]],
+          children: [
+            ["", "FAQ"],
+            ["integrations", "Integrations", ""],
+            ["paid-features", "Paid features"],
+          ],
         },
       ],
       "/guide/": [
