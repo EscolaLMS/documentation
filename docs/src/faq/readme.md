@@ -116,3 +116,13 @@ We use AWS and OVH cloud on day to day basis. You can check our [terraform boile
 ## How is the issue of intellectual property and the possibility of reselling custom solutions purchased from you solved? The core is open source, and you add my customizations to it. I have my own domain and host. I receive files from you that I place in my remote repository and can do whatever I want with them, or does the code from your (Escola) GIT flow to my server and domain?
 
 You have dual licensing: MIT & Commercial license
+
+## What feature are planned? Do you have a road map?
+
+Road map is hosted at [wellms.canny.io](https://wellms.canny.io/)
+
+## What are hosting options for Wellms?
+
+At the moment wellms is self hosted. You either host it on machine/cloud you provide or on ours
+
+The cloud SaaS is going to be published in nearest future.
