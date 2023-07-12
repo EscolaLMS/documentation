@@ -80,8 +80,3 @@ Handling events
 - `EscolaLms\Webinar\Events\WebinarUserUnassigned` => remove user from webinar channel
 - `EscolaLms\Webinar\Events\WebinarTrainerAssigned` => add user to webinar channel with channel_admin role 
 - `EscolaLms\Webinar\Events\WebinarTrainerUnassigned` => remove user from webinar channel
-
-## How to use this on frontend
-### Admin panel
-**Settings**
-![Settings](https://raw.githubusercontent.com/EscolaLMS/Mattermost/main/docs/settings.png "Settings")
