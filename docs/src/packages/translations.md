@@ -1,2 +1,0 @@
-# Transaltions
-Translations management 

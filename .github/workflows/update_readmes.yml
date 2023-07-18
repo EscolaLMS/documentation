@@ -17,10 +17,10 @@ jobs:
           registry-url: "https://registry.npmjs.org"
 
       - name: Install deps
-        run: cd docs && npm i
+        run: npm i
 
       - name: Build
-        run: cd docs && npm run sync
+        run: npm run sync
 
       - name: Push
         run: |
