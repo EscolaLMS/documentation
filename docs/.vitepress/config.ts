@@ -558,6 +558,10 @@ export default defineConfigWithTheme(
             items: [
               { text: "Introduction", link: "/development/" },
               { text: "Create Wellms App", link: "/development/cra" },
+              {
+                text: "Continuous integration (CI) i Continuous Delivery",
+                link: "/development/ci_cd",
+              },
               { text: "Backend customization", link: "/development/backend" },
               {
                 text: "Admin panel customization",
