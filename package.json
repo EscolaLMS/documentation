@@ -1,0 +1,36 @@
+{
+  "name": "wellms-docs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "vitepress dev docs",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs",
+    "sync": "cd sync && node index.js && cp md/packages/*.md ../docs/packages && cp md/app-guide/*.md ../docs/app-guide "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "mermaid": "^10.2.4",
+    "stylus": "^0.59.0",
+    "vitepress": "1.0.0-beta.5",
+    "vitepress-plugin-mermaid": "^2.0.13"
+  },
+  "dependencies": {
+    "@jcamp/tailwindcss-plugin-icons": "^0.6.2",
+    "autoprefixer": "^10.4.14",
+    "date-fns": "^2.30.0",
+    "feed": "^4.2.2",
+    "request": "^2.88.2",
+    "tailwindcss": "^3.3.3"
+  },
+  "postcss": {
+    "plugins": {
+      "tailwindcss": {},
+      "autoprefixer": {}
+    }
+  }
+}

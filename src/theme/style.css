@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+}
+
+div.theme-style-div {
+  background-color: var(--vp-c-brand);
+}
+
+.VPHome .image-bg,
+.VPImage.image-src {
+  background: none;
+}
