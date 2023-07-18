@@ -1,0 +1,1 @@
+import{_ as e,o as t,c as a,V as s}from"./chunks/framework.c495fe11.js";const g=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"app-guide/cart.md","filePath":"app-guide/cart.md"}'),i={name:"app-guide/cart.md"},o=s("",62),r=[o];function n(c,d,l,h,p,u){return t(),a("div",null,r)}const f=e(i,[["render",n]]);export{g as __pageData,f as default};

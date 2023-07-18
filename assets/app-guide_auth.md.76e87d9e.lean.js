@@ -1,0 +1,1 @@
+import{_ as e,o as t,c as a,V as o}from"./chunks/framework.c495fe11.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"app-guide/auth.md","filePath":"app-guide/auth.md"}'),s={name:"app-guide/auth.md"},i=o("",71),n=[i];function r(h,l,c,d,u,g){return t(),a("div",null,n)}const f=e(s,[["render",r]]);export{m as __pageData,f as default};

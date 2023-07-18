@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>Wellms journey Blog</title>
+        <link>localhost/blog</link>
+        <description>All these articles were written by wellms developers</description>
+        <lastBuildDate>Tue, 18 Jul 2023 12:29:46 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>en</language>
+        <item>
+            <title><![CDATA[Local Front SDK Development]]></title>
+            <link>localhost/blog/blog/posts/2023-04-12-local-sdk-development.html</link>
+            <guid>localhost/blog/blog/posts/2023-04-12-local-sdk-development.html</guid>
+            <pubDate>Sun, 23 Apr 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Tutorial how do setup local SDK development on project</p>
+]]></description>
+            <content:encoded><![CDATA[<p>Tutorial how do setup local SDK development on project</p>
+<hr>
+<h1 id="local-front-sdk-development" tabindex="-1">Local Front SDK Development <a class="header-anchor" href="#local-front-sdk-development" aria-label="Permalink to &quot;Local Front SDK Development&quot;">&ZeroWidthSpace;</a></h1>
+<p>All frontend React application are using <a href="https://www.npmjs.com/package/@escolalms/sdk" target="_blank" rel="noreferrer">sdk as API connector</a> with TypeScript Definition</p>
+<p>Working on this might be complicated as usually this is just imported as compiled npm package. There are some ways like <a href="https://docs.npmjs.com/cli/v8/commands/npm-link" target="_blank" rel="noreferrer"><code>npm link</code></a> or <code>yarn link</code> to work on local packages, yet it's complicated with TypeScript ones. Here are two scripts that allows to work on <code>sdk</code> as natove typescript files.</p>
+<p>Assuming you have <code>sdk</code> already in you <code>package.json</code> file, next to it I'm creating two bash scripts - one to switch to local version other to use compiled version from <code>npm</code>.</p>
+<p><code>switch_to_local_sdk.sh</code> file has <code>yarn</code> version of task.</p>
+<div class="language-bash"><button title="Copy Code" class="copy"></button><span class="lang">bash</span><pre v-pre class="shiki material-theme-palenight" ><code><span class="line"><span style="color: #676E95; font-style: italic">#!/bin/sh</span></span>
+<span class="line"><span style="color: #FFCB6B">yarn</span><span style="color: #A6ACCD"> </span><span style="color: #C3E88D">remove</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">@escolalms/sdk</span><span style="color: #89DDFF">&quot;</span></span>
+<span class="line"><span style="color: #FFCB6B">yarn</span><span style="color: #A6ACCD"> </span><span style="color: #C3E88D">add</span><span style="color: #A6ACCD"> </span><span style="color: #C3E88D">jssha</span><span style="color: #A6ACCD"> </span><span style="color: #C3E88D">@escolalms/ts-models</span><span style="color: #A6ACCD"> </span><span style="color: #C3E88D">umi-request</span></span>
+<span class="line"><span style="color: #FFCB6B">git</span><span style="color: #A6ACCD"> </span><span style="color: #C3E88D">clone</span><span style="color: #A6ACCD"> </span><span style="color: #C3E88D">git@github.com:EscolaLMS/sdk.git</span></span>
+<span class="line"><span style="color: #FFCB6B">cp</span><span style="color: #A6ACCD"> </span><span style="color: #C3E88D">tsconfig.json.local</span><span style="color: #A6ACCD"> </span><span style="color: #C3E88D">tsconfig.json</span></span>
+<span class="line"><span style="color: #82AAFF">echo</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">switched to local</span><span style="color: #89DDFF">&quot;</span></span>
+<span class="line"><span style="color: #FFCB6B">yarn</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&amp;&amp;</span><span style="color: #A6ACCD"> </span><span style="color: #FFCB6B">yarn</span><span style="color: #A6ACCD"> </span><span style="color: #C3E88D">dev</span></span></code></pre>
+</div><p>and <code>switch_to_prod_sdk.sh</code></p>
+<div class="language-bash"><button title="Copy Code" class="copy"></button><span class="lang">bash</span><pre v-pre class="shiki material-theme-palenight" ><code><span class="line"><span style="color: #676E95; font-style: italic">#!/bin/sh</span></span>
+<span class="line"><span style="color: #FFCB6B">yarn</span><span style="color: #A6ACCD"> </span><span style="color: #C3E88D">remove</span><span style="color: #A6ACCD"> </span><span style="color: #C3E88D">jssha</span><span style="color: #A6ACCD"> </span><span style="color: #C3E88D">@escolalms/ts-models</span><span style="color: #A6ACCD"> </span><span style="color: #C3E88D">umi-request</span></span>
+<span class="line"><span style="color: #FFCB6B">yarn</span><span style="color: #A6ACCD"> </span><span style="color: #C3E88D">add</span><span style="color: #A6ACCD"> </span><span style="color: #C3E88D">@escolalms/sdk</span></span>
+<span class="line"><span style="color: #FFCB6B">cp</span><span style="color: #A6ACCD"> </span><span style="color: #C3E88D">tsconfig.json.prod</span><span style="color: #A6ACCD"> </span><span style="color: #C3E88D">tsconfig.json</span></span>
+<span class="line"><span style="color: #82AAFF">echo</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">switched to prod</span><span style="color: #89DDFF">&quot;</span></span>
+<span class="line"><span style="color: #FFCB6B">yarn</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&amp;&amp;</span><span style="color: #A6ACCD"> </span><span style="color: #FFCB6B">yarn</span><span style="color: #A6ACCD"> </span><span style="color: #C3E88D">dev</span></span></code></pre>
+</div><p>then I have two versions of <code>tsconfig</code> file as well</p>
+<p>Note: those are <code>next.js</code> typescript configuration.</p>
+<p><code>tsconfig.json.local</code></p>
+<div class="language-json"><button title="Copy Code" class="copy"></button><span class="lang">json</span><pre v-pre class="shiki material-theme-palenight" ><code><span class="line"><span style="color: #89DDFF">{</span></span>
+<span class="line"><span style="color: #A6ACCD">  </span><span style="color: #89DDFF">&quot;</span><span style="color: #C792EA">compilerOptions</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span></span>
+<span class="line"><span style="color: #A6ACCD">    </span><span style="color: #89DDFF">&quot;</span><span style="color: #FFCB6B">target</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">es5</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">,</span></span>
+<span class="line"><span style="color: #A6ACCD">    </span><span style="color: #89DDFF">&quot;</span><span style="color: #FFCB6B">lib</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">[</span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">dom</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">,</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">dom.iterable</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">,</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">esnext</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">],</span></span>
+<span class="line"><span style="color: #A6ACCD">    </span><span style="color: #89DDFF">&quot;</span><span style="color: #FFCB6B">allowJs</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">true,</span></span>
+<span class="line"><span style="color: #A6ACCD">    </span><span style="color: #89DDFF">&quot;</span><span style="color: #FFCB6B">skipLibCheck</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">true,</span></span>
+<span class="line"><span style="color: #A6ACCD">    </span><span style="color: #89DDFF">&quot;</span><span style="color: #FFCB6B">strict</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">true,</span></span>
+<span class="line"><span style="color: #A6ACCD">    </span><span style="color: #89DDFF">&quot;</span><span style="color: #FFCB6B">forceConsistentCasingInFileNames</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">true,</span></span>
+<span class="line"><span style="color: #A6ACCD">    </span><span style="color: #89DDFF">&quot;</span><span style="color: #FFCB6B">noEmit</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">false,</span></span>
+<span class="line"><span style="color: #A6ACCD">    </span><span style="color: #89DDFF">&quot;</span><span style="color: #FFCB6B">esModuleInterop</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">true,</span></span>
+<span class="line"><span style="color: #A6ACCD">    </span><span style="color: #89DDFF">&quot;</span><span style="color: #FFCB6B">module</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">esnext</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">,</span></span>
+<span class="line"><span style="color: #A6ACCD">    </span><span style="color: #89DDFF">&quot;</span><span style="color: #FFCB6B">moduleResolution</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">node</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">,</span></span>
+<span class="line"><span style="color: #A6ACCD">    </span><span style="color: #89DDFF">&quot;</span><span style="color: #FFCB6B">resolveJsonModule</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">true,</span></span>
+<span class="line"><span style="color: #A6ACCD">    </span><span style="color: #89DDFF">&quot;</span><span style="color: #FFCB6B">isolatedModules</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">true,</span></span>
+<span class="line"><span style="color: #A6ACCD">    </span><span style="color: #89DDFF">&quot;</span><span style="color: #FFCB6B">jsx</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">preserve</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">,</span></span>
+<span class="line"><span style="color: #A6ACCD">    </span><span style="color: #89DDFF">&quot;</span><span style="color: #FFCB6B">incremental</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">true,</span></span>
+<span class="line"><span style="color: #A6ACCD">    </span><span style="color: #89DDFF">&quot;</span><span style="color: #FFCB6B">plugins</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">[</span></span>
+<span class="line"><span style="color: #A6ACCD">      </span><span style="color: #89DDFF">{</span></span>
+<span class="line"><span style="color: #A6ACCD">        </span><span style="color: #89DDFF">&quot;</span><span style="color: #F78C6C">name</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">next</span><span style="color: #89DDFF">&quot;</span></span>
+<span class="line"><span style="color: #A6ACCD">      </span><span style="color: #89DDFF">}</span></span>
+<span class="line"><span style="color: #A6ACCD">    </span><span style="color: #89DDFF">],</span></span>
+<span class="line"><span style="color: #A6ACCD">    </span><span style="color: #89DDFF">&quot;</span><span style="color: #FFCB6B">baseUrl</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">.</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">,</span></span>
+<span class="line"><span style="color: #A6ACCD">    </span><span style="color: #89DDFF">&quot;</span><span style="color: #FFCB6B">paths</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span></span>
+<span class="line"><span style="color: #A6ACCD">      </span><span style="color: #89DDFF">&quot;</span><span style="color: #F78C6C">@/*</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">[</span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">./src/*</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">],</span></span>
+<span class="line"><span style="color: #A6ACCD">      </span><span style="color: #89DDFF">&quot;</span><span style="color: #F78C6C">@escolalms/sdk/lib/*</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">[</span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">./sdk/src/*</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">]</span></span>
+<span class="line"><span style="color: #A6ACCD">    </span><span style="color: #89DDFF">}</span></span>
+<span class="line"><span style="color: #A6ACCD">  </span><span style="color: #89DDFF">},</span></span>
+<span class="line"><span style="color: #A6ACCD">  </span><span style="color: #89DDFF">&quot;</span><span style="color: #C792EA">include</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">[</span></span>
+<span class="line"><span style="color: #A6ACCD">    </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">next-env.d.ts</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">,</span></span>
+<span class="line"><span style="color: #A6ACCD">    </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">**/*.ts</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">,</span></span>
+<span class="line"><span style="color: #A6ACCD">    </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">**/*.tsx</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">,</span></span>
+<span class="line"><span style="color: #A6ACCD">    </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">.next/types/**/*.ts</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">,</span></span>
+<span class="line"><span style="color: #A6ACCD">    </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">./node_modules/@escolalms/ts-models/models.d.ts</span><span style="color: #89DDFF">&quot;</span></span>
+<span class="line"><span style="color: #A6ACCD">  </span><span style="color: #89DDFF">],</span></span>
+<span class="line"><span style="color: #A6ACCD">  </span><span style="color: #89DDFF">&quot;</span><span style="color: #C792EA">exclude</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">[</span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">node_modules</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">]</span></span>
+<span class="line"><span style="color: #89DDFF">}</span></span></code></pre>
+</div><p><code>tsconfig.json.prod</code></p>
+<div class="language-json"><button title="Copy Code" class="copy"></button><span class="lang">json</span><pre v-pre class="shiki material-theme-palenight" ><code><span class="line"><span style="color: #89DDFF">{</span></span>
+<span class="line"><span style="color: #A6ACCD">  </span><span style="color: #89DDFF">&quot;</span><span style="color: #C792EA">compilerOptions</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span></span>
+<span class="line"><span style="color: #A6ACCD">    </span><span style="color: #89DDFF">&quot;</span><span style="color: #FFCB6B">target</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">es5</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">,</span></span>
+<span class="line"><span style="color: #A6ACCD">    </span><span style="color: #89DDFF">&quot;</span><span style="color: #FFCB6B">lib</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">[</span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">dom</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">,</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">dom.iterable</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">,</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">esnext</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">],</span></span>
+<span class="line"><span style="color: #A6ACCD">    </span><span style="color: #89DDFF">&quot;</span><span style="color: #FFCB6B">allowJs</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">true,</span></span>
+<span class="line"><span style="color: #A6ACCD">    </span><span style="color: #89DDFF">&quot;</span><span style="color: #FFCB6B">skipLibCheck</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">true,</span></span>
+<span class="line"><span style="color: #A6ACCD">    </span><span style="color: #89DDFF">&quot;</span><span style="color: #FFCB6B">strict</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">true,</span></span>
+<span class="line"><span style="color: #A6ACCD">    </span><span style="color: #89DDFF">&quot;</span><span style="color: #FFCB6B">forceConsistentCasingInFileNames</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">true,</span></span>
+<span class="line"><span style="color: #A6ACCD">    </span><span style="color: #89DDFF">&quot;</span><span style="color: #FFCB6B">noEmit</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">false,</span></span>
+<span class="line"><span style="color: #A6ACCD">    </span><span style="color: #89DDFF">&quot;</span><span style="color: #FFCB6B">esModuleInterop</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">true,</span></span>
+<span class="line"><span style="color: #A6ACCD">    </span><span style="color: #89DDFF">&quot;</span><span style="color: #FFCB6B">module</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">esnext</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">,</span></span>
+<span class="line"><span style="color: #A6ACCD">    </span><span style="color: #89DDFF">&quot;</span><span style="color: #FFCB6B">moduleResolution</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">node</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">,</span></span>
+<span class="line"><span style="color: #A6ACCD">    </span><span style="color: #89DDFF">&quot;</span><span style="color: #FFCB6B">resolveJsonModule</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">true,</span></span>
+<span class="line"><span style="color: #A6ACCD">    </span><span style="color: #89DDFF">&quot;</span><span style="color: #FFCB6B">isolatedModules</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">true,</span></span>
+<span class="line"><span style="color: #A6ACCD">    </span><span style="color: #89DDFF">&quot;</span><span style="color: #FFCB6B">jsx</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">preserve</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">,</span></span>
+<span class="line"><span style="color: #A6ACCD">    </span><span style="color: #89DDFF">&quot;</span><span style="color: #FFCB6B">incremental</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">true,</span></span>
+<span class="line"><span style="color: #A6ACCD">    </span><span style="color: #89DDFF">&quot;</span><span style="color: #FFCB6B">plugins</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">[</span></span>
+<span class="line"><span style="color: #A6ACCD">      </span><span style="color: #89DDFF">{</span></span>
+<span class="line"><span style="color: #A6ACCD">        </span><span style="color: #89DDFF">&quot;</span><span style="color: #F78C6C">name</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">next</span><span style="color: #89DDFF">&quot;</span></span>
+<span class="line"><span style="color: #A6ACCD">      </span><span style="color: #89DDFF">}</span></span>
+<span class="line"><span style="color: #A6ACCD">    </span><span style="color: #89DDFF">],</span></span>
+<span class="line"><span style="color: #A6ACCD">    </span><span style="color: #89DDFF">&quot;</span><span style="color: #FFCB6B">baseUrl</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">.</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">,</span></span>
+<span class="line"><span style="color: #A6ACCD">    </span><span style="color: #89DDFF">&quot;</span><span style="color: #FFCB6B">paths</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span></span>
+<span class="line"><span style="color: #A6ACCD">      </span><span style="color: #89DDFF">&quot;</span><span style="color: #F78C6C">@/*</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">[</span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">./src/*</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">]</span></span>
+<span class="line"><span style="color: #A6ACCD">    </span><span style="color: #89DDFF">}</span></span>
+<span class="line"><span style="color: #A6ACCD">  </span><span style="color: #89DDFF">},</span></span>
+<span class="line"><span style="color: #A6ACCD">  </span><span style="color: #89DDFF">&quot;</span><span style="color: #C792EA">include</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">[</span></span>
+<span class="line"><span style="color: #A6ACCD">    </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">next-env.d.ts</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">,</span></span>
+<span class="line"><span style="color: #A6ACCD">    </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">**/*.ts</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">,</span></span>
+<span class="line"><span style="color: #A6ACCD">    </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">**/*.tsx</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">,</span></span>
+<span class="line"><span style="color: #A6ACCD">    </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">.next/types/**/*.ts</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">,</span></span>
+<span class="line"><span style="color: #A6ACCD">    </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">./node_modules/@escolalms/ts-models/models.d.ts</span><span style="color: #89DDFF">&quot;</span></span>
+<span class="line"><span style="color: #A6ACCD">  </span><span style="color: #89DDFF">],</span></span>
+<span class="line"><span style="color: #A6ACCD">  </span><span style="color: #89DDFF">&quot;</span><span style="color: #C792EA">exclude</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">[</span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">node_modules</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">]</span></span>
+<span class="line"><span style="color: #89DDFF">}</span></span></code></pre>
+</div><p>After launching script <code>switch_to_local_sdk.sh</code></p>
+<p>All imports like</p>
+<div class="language-ts"><button title="Copy Code" class="copy"></button><span class="lang">ts</span><pre v-pre class="shiki material-theme-palenight" ><code><span class="line"><span style="color: #89DDFF; font-style: italic">import</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span><span style="color: #F07178"> </span><span style="color: #A6ACCD">API</span><span style="color: #F07178"> </span><span style="color: #89DDFF">}</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF; font-style: italic">from</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">@escolalms/sdk/lib</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">;</span></span>
+<span class="line"><span style="color: #89DDFF; font-style: italic">import</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span><span style="color: #F07178"> </span><span style="color: #A6ACCD">EscolaLMSContext</span><span style="color: #F07178"> </span><span style="color: #89DDFF">}</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF; font-style: italic">from</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">@escolalms/sdk/lib/react</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">;</span></span>
+<span class="line"><span style="color: #89DDFF; font-style: italic">import</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span><span style="color: #F07178"> </span><span style="color: #A6ACCD">CourseProgressItemElementStatus</span><span style="color: #F07178"> </span><span style="color: #89DDFF">}</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF; font-style: italic">from</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">@escolalms/sdk/lib/types/api</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">;</span></span></code></pre>
+</div><p>would be taken from local <code>sdk</code> folder as typescript files instead of <code>node_modules/@escolalms/sdk</code>.</p>
+<p>Once you know all changes in <code>sdk</code> are working fine you can switch ro production with <code>switch_to_prod_sdk.sh</code> before sending code to git repository.</p>
+<p>You should also consider adding whole <code>sdk</code> folder into <code>.gitignore</code></p>
+<p><strong>Happy development!</strong></p>
+<Disqus/>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Course & Consultation Access]]></title>
+            <link>localhost/blog/blog/posts/2023-04-04-course-consultation-access.html</link>
+            <guid>localhost/blog/blog/posts/2023-04-04-course-consultation-access.html</guid>
+            <pubDate>Tue, 04 Apr 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[<p>This post explains how does Course &amp; Consultation Access works with the examples</p>
+]]></description>
+            <content:encoded><![CDATA[<p>This post explains how does Course &amp; Consultation Access works with the examples</p>
+<hr>
+<h1 id="course-consultation-access" tabindex="-1">Course &amp; Consultation Access <a class="header-anchor" href="#course-consultation-access" aria-label="Permalink to &quot;Course &amp; Consultation Access&quot;">&ZeroWidthSpace;</a></h1>
+<p>Here is a brief explanation of new features of new packages</p>
+<ul>
+<li><a href="https://github.com/EscolaLMS/Consultation-Access" target="_blank" rel="noreferrer">Consultation-Access</a></li>
+<li><a href="https://github.com/EscolaLMS/Course-Access" target="_blank" rel="noreferrer">Course-Access</a></li>
+</ul>
+<h2 id="access-standard-flow" tabindex="-1">Access standard flow <a class="header-anchor" href="#access-standard-flow" aria-label="Permalink to &quot;Access standard flow&quot;">&ZeroWidthSpace;</a></h2>
+<p>The flow of both are similar.</p>
+<ol>
+<li>Students asks for access to content: Course, Consultation, etc</li>
+<li>Students can leave additional info (unstructured, send as <code>JSON</code>)</li>
+<li>Admin/Tutor receives a notification</li>
+<li>Admin/Tutor either accept or denies</li>
+<li>Student receives Notification about result</li>
+<li>Student got access to content</li>
+</ol>
+
+      <Suspense> 
+      <template #default>
+      <Mermaid id="mermaid-60"  graph="sequenceDiagram%0A%20%20%20%20actor%20Student%0A%20%20%20%20actor%20Admin%0A%20%20%20%20Student-%3E%3EAdmin%3A%20Front%20App.%20Request%20access%20for%20content%0A%20%20%20%20Admin-%3E%3EStudent%3A%20Admin%20Panel.%20Give%20access%20to%20content%0A"></Mermaid>
+      </template>
+        <!-- loading state via #fallback slot -->
+        <template #fallback>
+          Loading...
+        </template>
+      </Suspense><h3 id="course-access" tabindex="-1">Course Access <a class="header-anchor" href="#course-access" aria-label="Permalink to &quot;Course Access&quot;">&ZeroWidthSpace;</a></h3>
+<ol>
+<li>Students asks for access to Course</li>
+<li>Students can leave additional info (unstructured, send as <code>JSON</code>)</li>
+<li>Admin/Tutor receives a notification (email, push, sms)</li>
+<li>Admin/Tutor either accept or denies (in Admin panel)</li>
+<li>Student receives Notification about result</li>
+<li>Student got access to content</li>
+</ol>
+
+      <Suspense> 
+      <template #default>
+      <Mermaid id="mermaid-96"  graph="sequenceDiagram%0A%20%20%20%20actor%20Student%0A%20%20%20%20actor%20Admin%0A%20%20%20%20Student-%3E%3EAdmin%3A%20Front%20App.%20Request%20Course%20X%20access%0A%20%20%20%20Note%20over%20Student%2CAdmin%3A%20POST%20%2Fapi%2Fcourse-access-enquiries%20body%3Acourse_id%0A%20%20%20%20Admin-%3E%3EStudent%3A%20Admin%20Panel.%20Give%20access%20to%20Course%20X%0A%20%20%20%20Note%20over%20Admin%2CStudent%3A%20POST%20api%2Fadmin%2Fcourse-access-enquiries%2Fapprove%2F1%0A"></Mermaid>
+      </template>
+        <!-- loading state via #fallback slot -->
+        <template #fallback>
+          Loading...
+        </template>
+      </Suspense><p><img src="./2023-04-04/20230411165103.png" alt=""></p>
+<h3 id="consultation-access" tabindex="-1">Consultation Access <a class="header-anchor" href="#consultation-access" aria-label="Permalink to &quot;Consultation Access&quot;">&ZeroWidthSpace;</a></h3>
+<ol>
+<li>Students asks for access to Course</li>
+<li>Students can leave additional info (unstructured, send as <code>JSON</code>) and need to select at least on proposed term date</li>
+<li>Admin/Tutor receives a notification (email, push, sms)</li>
+<li>Admin/Tutor either accept ONE of term or denies all (in Admin panel)</li>
+<li>Admin/Tutor fills meeting URL for student (optional)</li>
+<li>Student receives Notification about result</li>
+<li>Student got access to content</li>
+</ol>
+
+      <Suspense> 
+      <template #default>
+      <Mermaid id="mermaid-140"  graph="sequenceDiagram%0A%20%20%20%20actor%20Student%0A%20%20%20%20actor%20Admin%0A%20%20%20%20Student-%3E%3EAdmin%3A%20Front%20App.%20Request%20Consultation%20X%20access%20()%0A%20%20%20%20Note%20over%20Student%2CAdmin%3A%20POST%20%2Fapi%2Fconsultation-access-enquiries%20body%3Aconsultation_id%20proposed_terms%5B%5D%0A%20%20%20%20Admin-%3E%3EStudent%3A%20Admin%20Panel.%20Give%20access%20to%20Consultation%20X%20with%20term%20Y%0A%20%20%20%20Note%20over%20Admin%2CStudent%3A%20POST%20%2FPOST%2Fapi%2Fadmin%2Fconsultation-access-enquiries%2Fapprove%2F%7BproposedTermId%7D%0A"></Mermaid>
+      </template>
+        <!-- loading state via #fallback slot -->
+        <template #fallback>
+          Loading...
+        </template>
+      </Suspense><p>Student sends and request with list of proposed terms, optionally he selects with content this consultation relates to (eg Course).
+Admin either selects one terms of many proposed by student or he declines.
+Accepting term allows to send a URL with consultation (eg zoom link), dy default a random <a href="https://meet.jit.si/" target="_blank" rel="noreferrer">meet.jit.si</a> is generated. In admin reject he has option to hive rejection message description. Student receives all information as notification.</p>
+<div class="language-json"><button title="Copy Code" class="copy"></button><span class="lang">json</span><pre v-pre class="shiki material-theme-palenight" ><code><span class="line"><span style="color: #89DDFF">{</span></span>
+<span class="line"><span style="color: #A6ACCD">  </span><span style="color: #89DDFF">&quot;</span><span style="color: #C792EA">consultation_id</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #F78C6C">0</span><span style="color: #89DDFF">,</span></span>
+<span class="line"><span style="color: #A6ACCD">  </span><span style="color: #89DDFF">&quot;</span><span style="color: #C792EA">description</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">string</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">,</span></span>
+<span class="line"><span style="color: #A6ACCD">  </span><span style="color: #89DDFF">&quot;</span><span style="color: #C792EA">title</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">string</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">,</span></span>
+<span class="line"><span style="color: #A6ACCD">  </span><span style="color: #89DDFF">&quot;</span><span style="color: #C792EA">related_type</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">string</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">,</span></span>
+<span class="line"><span style="color: #A6ACCD">  </span><span style="color: #89DDFF">&quot;</span><span style="color: #C792EA">related_id</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #F78C6C">0</span><span style="color: #89DDFF">,</span></span>
+<span class="line"><span style="color: #A6ACCD">  </span><span style="color: #89DDFF">&quot;</span><span style="color: #C792EA">proposed_terms</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">[</span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">2023-04-11T14:53:12.590Z</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">]</span></span>
+<span class="line"><span style="color: #89DDFF">}</span></span></code></pre>
+</div><p><img src="./2023-04-04/20230411165207.png" alt=""></p>
+<Disqus/>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Program Nesting Configuration]]></title>
+            <link>localhost/blog/blog/posts/2023-04-04-program-nesting.html</link>
+            <guid>localhost/blog/blog/posts/2023-04-04-program-nesting.html</guid>
+            <pubDate>Tue, 04 Apr 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Tutorial how do setup minimum nesting of topics and maximum nesting of lessons.</p>
+]]></description>
+            <content:encoded><![CDATA[<p>Tutorial how do setup minimum nesting of topics and maximum nesting of lessons.</p>
+<hr>
+<h1 id="program-nesting-configuration" tabindex="-1">Program Nesting Configuration <a class="header-anchor" href="#program-nesting-configuration" aria-label="Permalink to &quot;Program Nesting Configuration&quot;">&ZeroWidthSpace;</a></h1>
+<p>Here is a simple tutorial how do setup minimum nesting of topics and maximum nesting of lessons.</p>
+<p>By default Wellms structure is based on <a href="https://escolalms.github.io/headless-format/#levels-of-granularity" target="_blank" rel="noreferrer">Ulam format</a>, which means that there is unlimited level of nesting of lessons:</p>
+<p>Each lessons starting from root branch can have unlimited sub lessons (branches), each sub lessons can have unlimited sub sub lessons, etc.</p>
+
+      <Suspense> 
+      <template #default>
+      <Mermaid id="mermaid-16"  graph="flowchart%20TD%0A%20%20%20%20A%5BLesson%5D%20--%3E%7CCan%20have%20zero%2C%20one%20or%20many%7C%20A(Lesson)%0A%20%20%20%20A%5BLesson%5D%20--%3E%7CCan%20have%20zero%2C%20one%20or%20many%7C%20B(Topic)%0A"></Mermaid>
+      </template>
+        <!-- loading state via #fallback slot -->
+        <template #fallback>
+          Loading...
+        </template>
+      </Suspense><p>Also each of those lessons can have number of units. This is a powerful structure, yet you can control this easily within admin panel settings.</p>
+<p>Below is an example of default setup</p>
+<video src="./2023-04-04/ScreenRecording2023-04-11at11.57.00.mp4" autoplay loop muted />
+<p>Assuming we want to control this to have maximum 3 level of lessons nesting and that topics can be added only on the last lesson level.</p>
+
+      <Suspense> 
+      <template #default>
+      <Mermaid id="mermaid-27"  graph="flowchart%20TD%0A%20%20%20%20A%5BLesson%20level%20one%5D%20--%3E%7CCan%20have%20zero%2C%20one%20or%20many%7C%20B(Lesson%20level%20two)%0A%20%20%20%20B%5BLesson%20level%20one%5D%20--%3E%7CCan%20have%20zero%2C%20one%20or%20many%7C%20C(Lesson%20level%20three)%0A%20%20%20%20C%5BLesson%20level%20three%5D%20--%3E%7CCan%20have%20zero%2C%20one%20or%20many%7C%20D(Topic)%0A"></Mermaid>
+      </template>
+        <!-- loading state via #fallback slot -->
+        <template #fallback>
+          Loading...
+        </template>
+      </Suspense><p>This achievable with admin panel settings (below are default values)</p>
+<p><img src="./2023-04-04/Screenshot2023-04-11at11.56.50.png" alt="" title="Default settings"></p>
+<p>Amending default values with sample onces</p>
+<p><img src="./2023-04-04/Screenshot2023-04-11at11.56.02.png" alt="" title="amended settings"></p>
+<p>would result in</p>
+<video src="./2023-04-04/ScreenRecording2023-04-11at11.53.18.mp4" autoplay loop muted />
+<Disqus/>]]></content:encoded>
+        </item>
+    </channel>
+</rss>

@@ -1,0 +1,1 @@
+import{_ as e,o as t,c as a,V as i}from"./chunks/framework.c495fe11.js";const g=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"app-guide/h5p.md","filePath":"app-guide/h5p.md"}'),o={name:"app-guide/h5p.md"},s=i("",28),r=[s];function n(l,c,d,p,h,u){return t(),a("div",null,r)}const m=e(o,[["render",n]]);export{g as __pageData,m as default};
