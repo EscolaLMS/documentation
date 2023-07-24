@@ -13,7 +13,7 @@ Package for generate pdf invoice from order
 
 ## What does it do
 
-This package is adapter for EscolaLMS to create pdf invoice by <a href="https://github.com/LaravelDaily/laravel-invoices" target="_blank">`laraveldaily/laravel-invoices`</a>
+This package is adapter for EscolaLMS to create pdf invoice by [laraveldaily/laravel-invoices](https://github.com/LaravelDaily/laravel-invoices)
 
 ## Installing
 
@@ -140,19 +140,8 @@ This package does not dispatch any events.
 
 ## Listeners
 
-This package does not listen for any events
-
-## How to use this on frontend.
-
-### Admin panel
-
-...
-
-### Front Application
-
-...
+This package does not listen for any events.
 
 ## Permissions
 
-- <a href="https://i.imgur.com/AoXsisJ.png">`view`</a> from `escolalms/cart` to get invoice pdf
-
+This package does not define new permissions but uses the `cart_order_list` permission from the [Cart](https://github.com/EscolaLMS/Cart) package.

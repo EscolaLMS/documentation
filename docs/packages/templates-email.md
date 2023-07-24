@@ -48,26 +48,6 @@ Run `./vendor/bin/phpunit --filter 'EscolaLms\\TemplatesEmail\\Tests'` to run te
 
 Test details [![codecov](https://codecov.io/gh/EscolaLMS/Templates-Email/branch/main/graph/badge.svg?token=O91FHNKI6R)](https://codecov.io/gh/EscolaLMS/Templates-Email) [![Tests PHPUnit in environments](https://github.com/EscolaLMS/Templates-Email/actions/workflows/test.yml/badge.svg)](https://github.com/EscolaLMS/Templates-Email/actions/workflows/test.yml)
 
-## Usage on front end
-
-### Admin panel
-
-#### **Left menu**
-
-![Menu](https://raw.githubusercontent.com/EscolaLMS/Templates-Email/main/docs/menu.png "Menu")
-
-#### **List of templates**
-
-![List of templates](https://raw.githubusercontent.com/EscolaLMS/Templates-Email/main/docs/list.png "List of templates")
-
-#### **Creating/editing template**
-
-![Creating/editing template](https://raw.githubusercontent.com/EscolaLMS/Templates-Email/main/docs/edit.png "Creating or editing template")
-
 ## Permissions
 
 No Permissions defined for this package.
-
-## Roadmap. Todo. Troubleshooting
-
-- ???

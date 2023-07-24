@@ -43,8 +43,8 @@ To register Event-Channel-Variable set, `Template::register($eventClass, $channe
 This package has no Channels or Variables defined, everything should be created in separate packages.
 
 - [Templates-Email](https://github.com/EscolaLMS/Templates-Email)
-- [Templates-Certificates](https://github.com/EscolaLMS/Templates-Certificates)
 - [Templates-Pdf](https://github.com/EscolaLMS/Templates-Pdf)
+- [Templates-Sms](https://github.com/EscolaLMS/Templates-SMS)
 
 ### Event Wrapper
 
@@ -66,28 +66,6 @@ Test details:
 
 - `EscolaLms\Templates\Listeners\TemplateEventListener` this listeners listens to all `EscolaLms` namespace events, checks if event is registered for any Template, and passes the event wrapped in `EventWrapper` to processing (so if event is registered and has corresponding Template, notification using that Template will be sent)
 
-## Usage on front end
-
-### Admin panel
-
-These screens will only be available if at least one Template is registered (for example any package implementing Channel and Variables is installed).
-
-#### **Left menu**
-
-![Menu](https://raw.githubusercontent.com/EscolaLMS/Templates/main/docs/menu.png "Menu")
-
-#### **List of templates**
-
-![List of templates](https://raw.githubusercontent.com/EscolaLMS/Templates/main/docs/list.png "List of templates")
-
-#### **Creating/editing template**
-
-![Creating/editing template](https://raw.githubusercontent.com/EscolaLMS/Templates/main/docs/edit.png "Creating or editing template")
-
 ## Permissions
 
-Permissions are defined in [Enum](https://github.com/EscolaLMS/Templates/tree/main/src/Enums/TemplatesPermissionsEnum.php) and seeded in [Seeder](database/seeders/PermissionTableSeeder.php).
-
-## Roadmap. Todo. Troubleshooting
-
-- ???
+Permissions are defined in [Enum](https://github.com/EscolaLMS/Templates/blob/main/src/Enums/TemplatesPermissionsEnum.php) and seeded in [Seeder](https://github.com/EscolaLMS/Templates/blob/main/database/seeders/PermissionTableSeeder.php).
