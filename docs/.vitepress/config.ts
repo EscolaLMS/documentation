@@ -241,10 +241,10 @@ export default defineConfigWithTheme(
               //   text: "CSV-Users. Exporting and importing users in `.csv` format",
               //   link: "/app-guide/csv-users",
               // },
-              // {
-              //   text: "fakturowania",
-              //   link: "/app-guide/fakturownia-integration",
-              // },
+               {
+                 text: "fakturowania",
+                 link: "/app-guide/fakturownia-integration",
+               },
               // {
               //   text: "Files. Uploading, deleting and reusing files.",
               //   link: "/app-guide/files",
