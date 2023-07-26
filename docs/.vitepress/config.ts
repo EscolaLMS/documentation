@@ -330,10 +330,10 @@ export default defineConfigWithTheme(
                 text: "Video Processing. Generation `hls` streaming formats",
                 link: "/app-guide/video",
               },
-              // {
-              //   text: "Vouchers. E-commerce vouchers to manage cart promotion",
-              //   link: "/app-guide/vouchers",
-              // },
+              {
+                text: "Vouchers. E-commerce vouchers to manage cart promotion",
+                link: "/app-guide/vouchers",
+              },
               // {
               //   text: "Webinar. Live video stream with `Jitsi` and `YouTube`",
               //   link: "/app-guide/webinar",
