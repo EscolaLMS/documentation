@@ -245,10 +245,10 @@ export default defineConfigWithTheme(
                  text: "fakturowania",
                  link: "/app-guide/fakturownia-integration",
                },
-              // {
-              //   text: "Files. Uploading, deleting and reusing files.",
-              //   link: "/app-guide/files",
-              // },
+               {
+                 text: "Files. Uploading, deleting and reusing files.",
+                 link: "/app-guide/files",
+               },
               {
                 text: "H5P. Rich HTML5 Content and Applications",
                 link: "/app-guide/h5p",
